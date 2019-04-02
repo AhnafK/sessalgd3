@@ -11,7 +11,7 @@ Scientific study of how happy people people are in various countries based on na
 The statistics per country will be displayed in a global map. Examining a country will provide statistics about its happiness ranking, as well as the other listed traits that the World Happiness Report felt might contribute to that. The map will be colored based on happiness. A chart may also appear with a list of these statistics.
 
 ## D3
-- D3 Geographic features to display data on a map
+- D3 Geographic features to display data on a map(GeoJSON from https://github.com/johan/world.geo.json/blob/master/countries.geo.json)
 - Data join functions will be used to regulate the countries in chart
 
 ## Envisioned Visualization
