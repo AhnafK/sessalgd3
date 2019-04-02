@@ -17,3 +17,14 @@ The statistics per country will be displayed in a global map. Examining a countr
 ## Envisioned Visualization
 https://www.worldlifeexpectancy.com/world-happiness-map
 ![map](https://github.com/AhnafK/sessalgd3/blob/master/mockup.JPG?raw=true)
+
+## LAUNCH CODES
+1. Copy the ssh/https link and run `$ git clone <link>`
+2. Install virtualenv by running `$ pip install virtualenv`
+   * Make a venv by running `$ python3 -m venv VENV_NAME`
+3. Activate your virtual environment by running `$ . ~/path_to_venv/VENV_NAME/bin/activate`
+   * Later deactivate your virtual environment by running `$ deactivate`
+4. Go to the root directory of the project. Install requirments by running `$ pip install -r requirements.txt`
+   * Manually, you can run `$ pip install flask` and `$ pip install wheel`
+5. To start the app, run `$ python app.py`
+6. Open the app (http://127.0.0.1:5000/) in your browser.
