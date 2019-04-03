@@ -349,6 +349,4 @@ graph.select('.xAxis')
 			.attr("transform", function(d){
 				return "rotate(-65)";
 			});
-
-
 }
