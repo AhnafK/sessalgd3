@@ -63,7 +63,7 @@
     var countries = []
     var master_data = []
     var json_data
-    d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/2017.json", function(data){
+    d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2017.json", function(data){
       json_data = data
     })
 
@@ -374,7 +374,7 @@
 
     var update = function(){
       xChart.domain(master_data.map(function(d){return d.Country}))
-      yChart.domain( [0, d3.max(master_data, function(d){ return +d["Happiness.Score"]; })] );
+      yChart.domain( [0, d3.max(master_data, function(d){ return +d["Happiness_Score"] })] );
 
       var barWidth = width/master_data.length;
       var bars = graph.selectAll(".bar")
@@ -385,8 +385,8 @@
                 .append("rect")
                 .attr("class", "bar")
                 .attr("x", function(d, i){ return i * barWidth + 1 })
-                .attr("y", function(d){ return yChart( d["Happiness.Score"]); })
-                .attr("height", function(d){ return height - yChart(d[""]); })
+                .attr("y", function(d){ return yChart( d["Happiness_Score"]) })
+                .attr("height", function(d){ return height - yChart(d["Happiness_Score"]) })
                 .attr("width", barWidth - 1)
                 .attr("fill", "rgb(251,180,174)");
 
