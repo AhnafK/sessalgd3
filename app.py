@@ -1,5 +1,5 @@
 '''
-sessalgd3 -- Angela Tom
+sessalgd3 -- Angela Tom, Soojin Choi, Simon Tsui, Ahnaf
 '''
 
 import os
