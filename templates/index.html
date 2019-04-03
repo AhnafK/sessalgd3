@@ -71,7 +71,7 @@
     // Define map projection
     var projection = d3
       .geoMercator()//Equirectangular()
-      .center([0, 45]) // set centre to further North as we are cropping more off bottom of map
+      .center([0, 60]) // set centre to further North as we are cropping more off bottom of map
       .scale([w / (5 * Math.PI)]) // scale to fit group width
       .translate([w/5 , h/5]) // ensure centred in group
     ;
@@ -316,7 +316,7 @@
         //initiateZoom();
       }
     );
-    var margin = {top: 20, right: 20, bottom: 95, left: 50};
+    var margin = {top: 20, right: 20, bottom: 95, left: 80};
     var width = 500
     var height = 300
 
@@ -356,7 +356,7 @@
     graph
     .append("text")
     .attr("transform", "translate(-35," +  (height+margin.bottom)/2 + ") rotate(-90)")
-    .text("Family");
+    .text("Happiness Score");
 
     graph
     .append("text")
@@ -374,7 +374,7 @@
 
     var update = function(){
       xChart.domain(master_data.map(function(d){return d.Country}))
-      yChart.domain( [0, d3.max(master_data, function(d){ return +d.Family; })] );
+      yChart.domain( [0, d3.max(master_data, function(d){ return +d["Happiness.Score"]; })] );
 
       var barWidth = width/master_data.length;
       var bars = graph.selectAll(".bar")
@@ -385,8 +385,8 @@
                 .append("rect")
                 .attr("class", "bar")
                 .attr("x", function(d, i){ return i * barWidth + 1 })
-                .attr("y", function(d){ return yChart( d.Family); })
-                .attr("height", function(d){ return height - yChart(d.Family); })
+                .attr("y", function(d){ return yChart( d["Happiness.Score"]); })
+                .attr("height", function(d){ return height - yChart(d[""]); })
                 .attr("width", barWidth - 1)
                 .attr("fill", "rgb(251,180,174)");
 
