@@ -178,7 +178,7 @@ w = 3000 ;
             var country_name = d.properties["admin"]
             var i
             for (i = 0; i < master_data.length; i++){
-              if (master_data[i]["Country"] == country_name){
+              if(country_name.search(master_data[i]["Country"]) != -1){
                 add = false
                 master_data.splice(i,1)
               }
@@ -224,6 +224,7 @@ w = 3000 ;
               //if (master_data[i]["Country"] == country_name){
                 add = false
                 master_data.splice(i,1)
+				console.log("false")
               }
             }
             if (add){
