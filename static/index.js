@@ -357,4 +357,5 @@ var update = function(){
         .attr("transform", function(d){
             return "rotate(-65)";
         });
+    }
 }
