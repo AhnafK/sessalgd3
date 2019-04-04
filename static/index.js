@@ -219,8 +219,9 @@ w = 3000 ;
             var add = true
             var country_name = d.properties["admin"]
             var i
-            for (i = 0; i < master_data.length; i++){
-              if (master_data[i]["Country"] == country_name){
+              for (i = 0; i < master_data.length; i++){
+		  if(country_name.search(master_data[i]["Country"]) != -1){
+              //if (master_data[i]["Country"] == country_name){
                 add = false
                 master_data.splice(i,1)
               }
@@ -308,8 +309,11 @@ w = 3000 ;
     .text("Country");
 
     var getData = function(name){
-      for(var i = 0; i < json_data.length; i++){
-       if(json_data[i]["Country"] == name){
+	for(var i = 0; i < json_data.length; i++){
+	    if(master_data.length > 5){
+		master_data.splice(0,1)
+	    }
+	    if(name.search(json_data[i]["Country"]) != -1){
           master_data[master_data.length] = json_data[i]
           console.log(master_data)
         }
