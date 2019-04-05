@@ -163,8 +163,32 @@ w = 3000 ;
             return "country" + d.properties.iso_a3;
           })
           .attr("class", "country")
-          .attr("stroke-width", 10)
-          .attr("stroke", "#ff0000")
+          .attr("stroke-width", 1)
+          .attr("stroke", "black")
+		  .attr("fill", function(d,i){
+			var country_name = d.properties["admin"]
+		  	for(var i = 0; i < json_data.length; i++){
+		  	    if(country_name.search(json_data[i]["Country"]) != -1){
+		            var target = json_data[i]["Happiness_Score"] - 2.6
+		            //console.log("Happiness Score:")
+					//console.log(target)
+					target = (target / 5)
+					//console.log("target / 8 val:")
+					//console.log(target)
+					color = target * (358)
+					console.log("color : ")
+					console.log(color)
+					if (color < 179){
+						return "rgb(244, " + (66 + color) + ", 66)"
+					}
+					else{
+						console.log(244 - (color - 178))
+						return "rgb(" + (244 - (color - 178)) + ",244, 66)"
+					}			
+		        }
+		      }
+			  return "white"
+           })
           // add a mouseover action to show name label for feature/country
           .on("mouseover", function(d, i) {
               d3.select("#countryLabel" + d.properties.iso_a3).style("display", "block");
@@ -320,7 +344,7 @@ w = 3000 ;
         }
       }
     }
-    
+
     var update = function(){
       xChart.domain(master_data.map(function(d){return d.Country}))
       yChart.domain( [0, d3.max(master_data, function(d){ return +d["Happiness_Score"] })] );
@@ -353,4 +377,3 @@ w = 3000 ;
             return "rotate(-65)";
           })
         }
-    
