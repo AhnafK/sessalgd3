@@ -25,26 +25,7 @@ var path = d3
 .geoPath()
 .projection(projection);
 
-// =!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!
 
-/*
-// Create function to apply zoom to countriesGroup
-function zoomed() {
-t = d3
-.event
-.transform
-;
-countriesGroup
-.attr("transform","translate(" + [t.x, t.y] + ")scale(" + t.k + ")")
-;
-}
-
-// Define map zoom behaviour
-var zoom = d3
-.zoom()
-.on("zoom", zoomed)
-;
-*/
 function getTextBox(selection) {
   selection
   .each(function(d) {
@@ -54,67 +35,6 @@ function getTextBox(selection) {
   ;
 }
 
-/*
-// Function that calculates zoom/pan limits and sets zoom to default value
-function initiateZoom() {
-// Define a "minzoom" whereby the "Countries" is as small possible without leaving white space at top/bottom or sides
-minZoom = Math.max($("#map-holder").width() / w, $("#map-holder").height() / h);
-// set max zoom to a suitable factor of this value
-maxZoom = 20 * minZoom;
-// set extent of zoom to chosen values
-// set translate extent so that panning can't cause map to move out of viewport
-zoom
-.scaleExtent([minZoom, maxZoom])
-.translateExtent([[0, 0], [w, h]])
-;
-// define X and Y offset for centre of map to be shown in centre of holder
-midX = ($("#map-holder").width() - minZoom * w) / 2;
-midY = ($("#map-holder").height() - minZoom * h) / 2;
-// change zoom transform to min zoom and centre offsets
-svg.call(zoom.transform, d3.zoomIdentity.translate(midX, midY).scale(minZoom));
-}
-
-// zoom to show a bounding box, with optional additional padding as percentage of box size
-function boxZoom(box, centroid, paddingPerc) {
-minXY = box[0];
-maxXY = box[1];
-// find size of map area defined
-zoomWidth = Math.abs(minXY[0] - maxXY[0]);
-zoomHeight = Math.abs(minXY[1] - maxXY[1]);
-// find midpoint of map area defined
-zoomMidX = centroid[0];
-zoomMidY = centroid[1];
-// increase map area to include padding
-zoomWidth = zoomWidth * (1 + paddingPerc / 100);
-zoomHeight = zoomHeight * (1 + paddingPerc / 100);
-// find scale required for area to fill svg
-maxXscale = $("svg").width() / zoomWidth;
-maxYscale = $("svg").height() / zoomHeight;
-zoomScale = Math.min(maxXscale, maxYscale);
-// handle some edge cases
-// limit to max zoom (handles tiny countries)
-zoomScale = Math.min(zoomScale, maxZoom);
-// limit to min zoom (handles large countries and countries that span the date line)
-zoomScale = Math.max(zoomScale, minZoom);
-// Find screen pixel equivalent once scaled
-offsetX = zoomScale * zoomMidX;
-offsetY = zoomScale * zoomMidY;
-// Find offset to centre, making sure no gap at left or top of holder
-dleft = Math.min(0, $("svg").width() / 2 - offsetX);
-dtop = Math.min(0, $("svg").height() / 2 - offsetY);
-// Make sure no gap at bottom or right of holder
-dleft = Math.max($("svg").width() - w * zoomScale, dleft);
-dtop = Math.max($("svg").height() - h * zoomScale, dtop);
-// set zoom
-svg
-.transition()
-.duration(500)
-.call(
-zoom.transform,
-d3.zoomIdentity.translate(dleft, dtop).scale(zoomScale)
-);
-}
-*/
 
 
 // on window resize
@@ -380,9 +300,9 @@ var update = function(){
 
 
 // 2. Use the margin convention practice
-var margin = {top: 50, right: 50, bottom: 50, left: 50}
-  , width = window.innerWidth - margin.left - margin.right // Use the window's width
-  , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
+var margin2 = {top: 50, right: 50, bottom: 50, left: 50}
+  , width2 = window.innerWidth - margin2.left - margin2.right // Use the window's width
+  , height2 = window.innerHeight - margin2.top - margin2.bottom; // Use the window's height
 
 // The number of datapoints
 var n = 21;
@@ -390,12 +310,12 @@ var n = 21;
 // 5. X scale will use the index of our data
 var xScale = d3.scaleLinear()
     .domain([0, n-1]) // input
-    .range([0, width]); // output
+    .range([0, width2]); // output
 
 // 6. Y scale will use the randomly generate number
 var yScale = d3.scaleLinear()
     .domain([0, 1]) // input
-    .range([height, 0]); // output
+    .range([height2, 0]); // output
 
 // 7. d3's line generator
 var line = d3.line()
@@ -408,15 +328,15 @@ var dataset = d3.range(n).map(function(d) { return {"y": d3.randomUniform(1)() }
 
 // 1. Add the SVG to the page and employ #2
 var svg1 = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
 // 3. Call the x axis in a group tag
 svg1.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + height2 + ")")
     .call(d3.axisBottom(xScale)); // Create an axis component with d3.axisBottom
 
 // 4. Call the y axis in a group tag
