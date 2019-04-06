@@ -6,10 +6,85 @@ var maxZoom;
 
 var countries = []
 var master_data = []
-var json_data
+var json_data //default 2017 data
+var json_data_2016
+var json_data_2015
+
+var view_year = 2017;
+
 d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2017.json", function(data){
   json_data = data
 })
+d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2016.json", function(data){
+  json_data_2016 = data
+})
+d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2015.json", function(data){
+  json_data_2015 = data
+})
+
+var button_2015 = document.getElementById("2015")
+var button_2016 = document.getElementById("2016")
+var button_2017 = document.getElementById("2017")
+//console.log(button_2016)
+
+var fill = function(){
+	console.log("fills")
+	var countries = d3.select("#map-holder")
+					  .select("svg")
+					  .select("g")
+					  .selectAll("path")
+   	 				  .attr("fill", function(d,i){
+		var data_set
+		if (view_year == 2017){
+			data_set = json_data
+		}
+		if (view_year == 2016){
+			data_set = json_data_2016
+		}
+    if (view_year == 2015){
+			data_set = json_data_2015
+		}
+      var country_name = d.properties["admin"]
+      for(var i = 0; i < data_set.length; i++){
+        if(country_name.search(data_set[i]["Country"]) != -1){
+          var target = data_set[i]["Happiness_Score"] - 2.6
+          //console.log("Happiness Score:")
+          //console.log(target)
+          target = (target / 5)
+          //console.log("target / 8 val:")
+          //console.log(target)
+          color = target * (358)
+          //console.log("color : ")
+          //console.log(color)
+          if (color < 179){
+            return "rgb(244, " + (66 + color) + ", 66)"
+          }
+          else{
+            console.log(244 - (color - 178))
+            return "rgb(" + (244 - (color - 178)) + ",244, 66)"
+          }
+        }
+      }
+      return "white"
+    })
+}
+
+button_2015.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2015
+  fill()
+})
+button_2016.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2016
+  fill()
+})
+button_2017.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2017
+  fill()
+})
+
 
 // DEFINE FUNCTIONS/OBJECTS
 // Define map projection
@@ -96,13 +171,13 @@ d3.json(
           //console.log("target / 8 val:")
           //console.log(target)
           color = target * (358)
-          console.log("color : ")
-          console.log(color)
+          //console.log("color : ")
+          //console.log(color)
           if (color < 179){
             return "rgb(244, " + (66 + color) + ", 66)"
           }
           else{
-            console.log(244 - (color - 178))
+            //console.log(244 - (color - 178))
             return "rgb(" + (244 - (color - 178)) + ",244, 66)"
           }
         }
