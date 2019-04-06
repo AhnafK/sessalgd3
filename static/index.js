@@ -206,6 +206,63 @@ d3.json(
     //initiateZoom();
   }
 );
+
+var w2 = 200, h2 = 50;
+
+    var key = d3.select(".legend")
+      .append("svg")
+      .attr("width", w2)
+      .attr("height", h2);
+
+    var legend = key.append("defs")
+      .append("svg:linearGradient")
+      .attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "100%")
+      .attr("x2", "100%")
+      .attr("y2", "100%")
+      .attr("spreadMethod", "pad");
+
+    legend.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "#f44141")
+      .attr("stop-opacity", 1);
+
+    legend.append("stop")
+      .attr("offset", "50%")
+      .attr("stop-color", "#f4f441")
+      .attr("stop-opacity", 1);
+
+    legend.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "#41f441")
+      .attr("stop-opacity", 1);
+
+    key.append("rect")
+      .attr("width", w2)
+      .attr("height", h2 - 30)
+      .style("fill", "url(#gradient)")
+      .attr("transform", "translate(0,10)");
+
+    var y = d3.scaleLinear()
+      .range([200, 0])
+      .domain([7, 0]);
+
+    var yAxis = d3.axisBottom()
+      .scale(y)
+      .ticks(5);
+
+    key.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(0,30)")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("axis title");
+
 var margin = {top: 20, right: 20, bottom: 95, left: 80};
 var width = 500
 var height = 300

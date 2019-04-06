@@ -50,3 +50,9 @@ svg rect {
   fill: none;
   stroke: steelblue;
 }
+
+.container .legend{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
