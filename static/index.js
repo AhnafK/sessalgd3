@@ -49,9 +49,9 @@ var button_2017 = document.getElementById("2017")
 
 var ranktf = false
 
-var rank = d3.select(".buttons")
+var rank = d3.select(".rank")
              .append("svg")
-             .attr("width", 200)
+             .attr("width", 1000)
              .attr("height", 70);
 
 var findRanking = function(country_name){
@@ -228,7 +228,7 @@ d3.json(
         console.log(ranking);
         ///*
         rank.append("text")
-            .text(ranking)
+            .text(country_name + ": " + ranking)
             .attr("font-size", "45px")
             .attr("fill", "black")
             .attr("x", "0")
@@ -289,7 +289,7 @@ d3.json(
         console.log(ranking);
         ///*
         rank.append("text")
-            .text(ranking)
+            .text(d.properties["admin"] + ": " + ranking)
             .attr("font-size", "45px")
             .attr("fill", "black")
             .attr("x", "0")
@@ -507,180 +507,3 @@ var update = function(){
 }
 
 
-
-  // Freedom
-
-  var margin = {top: 20, right: 20, bottom: 95, left: 80};
-var width2 = 1000
-var height2 = 300
-  var graph2 = d3.select(".chart2")
-.attr("width", width2 + margin.left + margin.right)
-.attr("height", height2 + margin.top + margin.bottom)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var xChart2 = d3.scaleBand()
-.range([0, width2]);
-
-var yChart2 = d3.scaleLinear()
-.range([height2, 0]);
-
-var xAxis2 = d3.axisBottom(xChart2);
-var yAxis2 = d3.axisLeft(yChart2);
-
-graph2.append("g")
-.attr("class", "y axis")
-.call(yAxis2)
-
-//bottom axis
-graph2.append("g")
-.attr("class", "xAxis")
-.attr("transform", "translate(0," + height2 + ")")
-.call(xAxis2)
-.selectAll("text")
-.style("text-anchor", "end")
-.attr("dx", "-.8em")
-.attr("dy", ".15em")
-.attr("transform", function(d){
-  return "rotate(-65)";
-});
-
-//add labels
-graph2
-.append("text")
-.attr("transform", "translate(-35," +  (height2+margin.bottom)/2 + ") rotate(-90)")
-.text("Freedom");
-
-graph2
-.append("text")
-.attr("transform", "translate(" + (width2/2) + "," + (height2 + margin.bottom - 5) + ")")
-.text("Country");
-
-var update2 = function(){
-  xChart2.domain(master_data.map(function(d){return d.Country}))
-  yChart2.domain( [0, d3.max(master_data, function(d){ return +d["Freedom"] })] );
-
-  var barWidth2 = width2/master_data.length;
-  var bars2 = graph2.selectAll(".bar")
-  .remove()
-  .exit()
-  .data(master_data)
-  bars2.enter()
-  .append("rect")
-  .attr("class", "bar")
-  .attr("x", function(d, i){ return i * barWidth2 + 1 })
-  .attr("y", function(d){ return yChart2( d["Freedom"]) })
-  .attr("height", function(d){ return height2 - yChart2(d["Freedom"]) })
-  .attr("width", barWidth2 - 1)
-  .attr("fill", "rgb(251,180,174)");
-
-  graph2.select('.y')
-  .call(yAxis2)
-  //bottom axis
-  graph2.select('.xAxis')
-  .attr("transform", "translate(0," + height2 + ")")
-  .call(xAxis2)
-  .selectAll("text")
-  .style("text-anchor", "end")
-  //.attr("dx", "-.8em")
-  //.attr("dy", ".15em")
-  .attr("transform", function(d){
-    return "rotate(-65)";
-  })
-}
-
-var clear2 = function(){
-  if(master_data.length > 1){
-    master_data.splice(0, master_data.length)
-  }
-  update2()
-}
-
-
-  // GDP
-
-  var margin = {top: 20, right: 20, bottom: 95, left: 80};
-var width3 = 1000
-var height3 = 300
-  var graph3 = d3.select(".chart3")
-.attr("width", width3 + margin.left + margin.right)
-.attr("height", height3 + margin.top + margin.bottom)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var xChart3 = d3.scaleBand()
-.range([0, width3]);
-
-var yChart3 = d3.scaleLinear()
-.range([height3, 0]);
-
-var xAxis3 = d3.axisBottom(xChart3);
-var yAxis3 = d3.axisLeft(yChart3);
-
-graph3.append("g")
-.attr("class", "y axis")
-.call(yAxis3)
-
-//bottom axis
-graph3.append("g")
-.attr("class", "xAxis")
-.attr("transform", "translate(0," + height3 + ")")
-.call(xAxis3)
-.selectAll("text")
-.style("text-anchor", "end")
-.attr("dx", "-.8em")
-.attr("dy", ".15em")
-.attr("transform", function(d){
-  return "rotate(-65)";
-});
-
-//add labels
-graph3
-.append("text")
-.attr("transform", "translate(-35," +  (height3+margin.bottom)/2 + ") rotate(-90)")
-.text("GDP per Capita");
-
-graph3
-.append("text")
-.attr("transform", "translate(" + (width3/2) + "," + (height3 + margin.bottom - 5) + ")")
-.text("Country");
-
-var update3 = function(){
-  xChart3.domain(master_data.map(function(d){return d.Country}))
-  yChart3.domain( [0, d3.max(master_data, function(d){ return +d["GDP"] })] );
-
-  var barWidth3 = width3/master_data.length;
-  var bars3 = graph3.selectAll(".bar")
-  .remove()
-  .exit()
-  .data(master_data)
-  bars3.enter()
-  .append("rect")
-  .attr("class", "bar")
-  .attr("x", function(d, i){ return i * barWidth3 + 1 })
-  .attr("y", function(d){ return yChart3( d["GDP"]) })
-  .attr("height", function(d){ return height3 - yChart3(d["GDP"]) })
-  .attr("width", barWidth3 - 1)
-  .attr("fill", "rgb(251,180,174)");
-
-  graph3.select('.y')
-  .call(yAxis3)
-  //bottom axis
-  graph3.select('.xAxis')
-  .attr("transform", "translate(0," + height3 + ")")
-  .call(xAxis3)
-  .selectAll("text")
-  .style("text-anchor", "end")
-  //.attr("dx", "-.8em")
-  //.attr("dy", ".15em")
-  .attr("transform", function(d){
-    return "rotate(-65)";
-  })
-}
-
-var clear3 = function(){
-  if(master_data.length > 1){
-    master_data.splice(0, master_data.length)
-  }
-  update3()
-}
