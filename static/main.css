@@ -73,3 +73,19 @@ h2{
 svg{
   margin-bottom:25px;
 }
+
+.jumbotron{
+    color: green;
+    text-align: center;
+}
+
+.rank{
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    border: blue 1px solid
+}
+
+.jumbotron h4{
+    color: limegreen;
+}
