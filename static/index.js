@@ -5,11 +5,106 @@ var minZoom;
 var maxZoom;
 
 var countries = []
+
+var country_names = []
 var master_data = []
-var json_data
+var compare = []
+
+var json_data //default 2017 data
+var json_data_2016
+var json_data_2015
+
+var current_data
+var view_year = 2017;
+
+var year = function(){
+  var data_set
+  if (view_year == 2017){
+    data_set = json_data
+  }
+  if (view_year == 2016){
+    data_set = json_data_2016
+  }
+  if (view_year == 2015){
+    data_set = json_data_2015
+  }
+  return data_set
+}
+
 d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2017.json", function(data){
+  current_data = json_data
   json_data = data
 })
+d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2016.json", function(data){
+  json_data_2016 = data
+})
+d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2015.json", function(data){
+  json_data_2015 = data
+})
+
+var button_2015 = document.getElementById("2015")
+var button_2016 = document.getElementById("2016")
+var button_2017 = document.getElementById("2017")
+//console.log(button_2016)
+
+var fill = function(){
+	console.log("fills")
+	var countries = d3.select("#map-holder")
+					  .select("svg")
+					  .select("g")
+					  .selectAll("path")
+   	 				  .attr("fill", function(d,i){
+		var data_set = year()
+      var country_name = d.properties["admin"]
+      for(var i = 0; i < data_set.length; i++){
+        if(country_name.search(data_set[i]["Country"]) != -1){
+          var target = data_set[i]["Happiness_Score"] - 2.6
+          //console.log("Happiness Score:")
+          //console.log(target)
+          target = (target / 5)
+          //console.log("target / 8 val:")
+          //console.log(target)
+          color = target * (358)
+          //console.log("color : ")
+          //console.log(color)
+          if (color < 179){
+            return "rgb(244, " + (66 + color) + ", 66)"
+          }
+          else{
+            console.log(244 - (color - 178))
+            return "rgb(" + (244 - (color - 178)) + ",244, 66)"
+          }
+        }
+      }
+      return "white"
+    })
+}
+
+button_2015.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2015
+  fill()
+  getData()
+  update()
+  //clear()
+})
+button_2016.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2016
+  fill()
+  getData()
+  update()
+  //clear()
+})
+button_2017.addEventListener('click', function(){
+  //console.log("red")
+  view_year = 2017
+  fill()
+  getData()
+  update()
+  //clear()
+})
+
 
 // DEFINE FUNCTIONS/OBJECTS
 // Define map projection
@@ -25,26 +120,7 @@ var path = d3
 .geoPath()
 .projection(projection);
 
-// =!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!=!
 
-/*
-// Create function to apply zoom to countriesGroup
-function zoomed() {
-t = d3
-.event
-.transform
-;
-countriesGroup
-.attr("transform","translate(" + [t.x, t.y] + ")scale(" + t.k + ")")
-;
-}
-
-// Define map zoom behaviour
-var zoom = d3
-.zoom()
-.on("zoom", zoomed)
-;
-*/
 function getTextBox(selection) {
   selection
   .each(function(d) {
@@ -54,67 +130,6 @@ function getTextBox(selection) {
   ;
 }
 
-/*
-// Function that calculates zoom/pan limits and sets zoom to default value
-function initiateZoom() {
-// Define a "minzoom" whereby the "Countries" is as small possible without leaving white space at top/bottom or sides
-minZoom = Math.max($("#map-holder").width() / w, $("#map-holder").height() / h);
-// set max zoom to a suitable factor of this value
-maxZoom = 20 * minZoom;
-// set extent of zoom to chosen values
-// set translate extent so that panning can't cause map to move out of viewport
-zoom
-.scaleExtent([minZoom, maxZoom])
-.translateExtent([[0, 0], [w, h]])
-;
-// define X and Y offset for centre of map to be shown in centre of holder
-midX = ($("#map-holder").width() - minZoom * w) / 2;
-midY = ($("#map-holder").height() - minZoom * h) / 2;
-// change zoom transform to min zoom and centre offsets
-svg.call(zoom.transform, d3.zoomIdentity.translate(midX, midY).scale(minZoom));
-}
-
-// zoom to show a bounding box, with optional additional padding as percentage of box size
-function boxZoom(box, centroid, paddingPerc) {
-minXY = box[0];
-maxXY = box[1];
-// find size of map area defined
-zoomWidth = Math.abs(minXY[0] - maxXY[0]);
-zoomHeight = Math.abs(minXY[1] - maxXY[1]);
-// find midpoint of map area defined
-zoomMidX = centroid[0];
-zoomMidY = centroid[1];
-// increase map area to include padding
-zoomWidth = zoomWidth * (1 + paddingPerc / 100);
-zoomHeight = zoomHeight * (1 + paddingPerc / 100);
-// find scale required for area to fill svg
-maxXscale = $("svg").width() / zoomWidth;
-maxYscale = $("svg").height() / zoomHeight;
-zoomScale = Math.min(maxXscale, maxYscale);
-// handle some edge cases
-// limit to max zoom (handles tiny countries)
-zoomScale = Math.min(zoomScale, maxZoom);
-// limit to min zoom (handles large countries and countries that span the date line)
-zoomScale = Math.max(zoomScale, minZoom);
-// Find screen pixel equivalent once scaled
-offsetX = zoomScale * zoomMidX;
-offsetY = zoomScale * zoomMidY;
-// Find offset to centre, making sure no gap at left or top of holder
-dleft = Math.min(0, $("svg").width() / 2 - offsetX);
-dtop = Math.min(0, $("svg").height() / 2 - offsetY);
-// Make sure no gap at bottom or right of holder
-dleft = Math.max($("svg").width() - w * zoomScale, dleft);
-dtop = Math.max($("svg").height() - h * zoomScale, dtop);
-// set zoom
-svg
-.transition()
-.duration(500)
-.call(
-zoom.transform,
-d3.zoomIdentity.translate(dleft, dtop).scale(zoomScale)
-);
-}
-*/
 
 
 // on window resize
@@ -137,6 +152,10 @@ var svg = d3
 // add zoom functionality
 //.call(zoom)
 ;
+
+var mapFxn = function(){
+
+}
 
 // get map data
 d3.json(
@@ -176,13 +195,13 @@ d3.json(
           //console.log("target / 8 val:")
           //console.log(target)
           color = target * (358)
-          console.log("color : ")
-          console.log(color)
+          //console.log("color : ")
+          //console.log(color)
           if (color < 179){
             return "rgb(244, " + (66 + color) + ", 66)"
           }
           else{
-            console.log(244 - (color - 178))
+            //console.log(244 - (color - 178))
             return "rgb(" + (244 - (color - 178)) + ",244, 66)"
           }
         }
@@ -201,19 +220,20 @@ d3.json(
       var add = true
       var country_name = d.properties["admin"]
       var i
-      for (i = 0; i < master_data.length; i++){
-        if(country_name.search(master_data[i]["Country"]) != -1){
+      for (i = 0; i < country_names.length; i++){
+        if(country_name.search(country_names[i]) != -1){
           add = false
-          master_data.splice(i,1)
+          country_names.splice(i,1)
         }
       }
       if (add){
-        getData(country_name)
+        country_names[country_names.length] = country_name
       }
+      getData()
+      console.log(master_data)
       update()
-      //d3.selectAll(".country").classed("country-on", false);
-      //d3.select(this).classed("country-on", true);
-      //boxZoom(path.bounds(d), path.centroid(d), 20);
+      update2()
+      update3()
     });
     // Add a label group to each feature/country. This will contain the country name and a background rectangle
     // Use CSS to have class "countryLabel" initially hidden
@@ -243,21 +263,20 @@ d3.json(
       var add = true
       var country_name = d.properties["admin"]
       var i
-      for (i = 0; i < master_data.length; i++){
-        if(country_name.search(master_data[i]["Country"]) != -1){
-          //if (master_data[i]["Country"] == country_name){
+      for (i = 0; i < country_names.length; i++){
+        if(country_name.search(country_names[i]) != -1){
           add = false
-          master_data.splice(i,1)
-          console.log("false")
+          country_names.splice(i,1)
         }
       }
       if (add){
-        getData(country_name)
+        country_names[country_names.length] = country_name
       }
+      getData()
+      console.log(country_names)
       update()
-      //d3.selectAll(".country").classed("country-on", false);
-      //d3.select("#country" + d.properties.iso_a3).classed("country-on", true);
-      //boxZoom(path.bounds(d), path.centroid(d), 20);
+      update2()
+      update3()
     });
     // add the text to the label group showing country name
     countryLabels
@@ -283,11 +302,67 @@ d3.json(
     .attr("height", function(d) {
       return d.bbox.height;
     });
-    //initiateZoom();
   }
 );
+
+var w2 = 200, h2 = 50;
+
+    var key = d3.select(".legend")
+      .append("svg")
+      .attr("width", w2)
+      .attr("height", h2);
+
+    var legend = key.append("defs")
+      .append("svg:linearGradient")
+      .attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "100%")
+      .attr("x2", "100%")
+      .attr("y2", "100%")
+      .attr("spreadMethod", "pad");
+
+    legend.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "#f44141")
+      .attr("stop-opacity", 1);
+
+    legend.append("stop")
+      .attr("offset", "50%")
+      .attr("stop-color", "#f4f441")
+      .attr("stop-opacity", 1);
+
+    legend.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "#41f441")
+      .attr("stop-opacity", 1);
+
+    key.append("rect")
+      .attr("width", w2)
+      .attr("height", h2 - 30)
+      .style("fill", "url(#gradient)")
+      .attr("transform", "translate(0,10)");
+
+    var y = d3.scaleLinear()
+      .range([200, 0])
+      .domain([7.5, 0]);
+
+    var yAxis = d3.axisBottom()
+      .scale(y)
+      .ticks(8);
+
+    key.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(0,30)")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("axis title");
+
 var margin = {top: 20, right: 20, bottom: 95, left: 80};
-var width = 500
+var width = 1000
 var height = 300
 
 var graph = d3.select(".chart")
@@ -333,14 +408,19 @@ graph
 .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom - 5) + ")")
 .text("Country");
 
-var getData = function(name){
-  for(var i = 0; i < json_data.length; i++){
-    if(master_data.length > 5){
-      master_data.splice(0,1)
-    }
-    if(name.search(json_data[i]["Country"]) != -1){
-      master_data[master_data.length] = json_data[i]
-      console.log(master_data)
+var getData = function(){
+  master_data = []
+  var data_set = year()
+  for (var j = 0; j< country_names.length; j++){
+    for(var i = 0; i < data_set.length; i++){
+      if(master_data.length > 10){
+        master_data.splice(0,1)
+      }
+      if(country_names[j].search(data_set[i]["Country"]) != -1){
+        console.log(j,i)
+        master_data[master_data.length] = data_set[i]
+        console.log(master_data)
+      }
     }
   }
 }
@@ -377,99 +457,182 @@ var update = function(){
     return "rotate(-65)";
   })
 }
+  
 
 
-// 2. Use the margin convention practice
-var margin = {top: 50, right: 50, bottom: 50, left: 50}
-  , width = window.innerWidth - margin.left - margin.right // Use the window's width
-  , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
+  // Freedom
 
-// The number of datapoints
-var n = 21;
+  var margin = {top: 20, right: 20, bottom: 95, left: 80};
+var width2 = 1000
+var height2 = 300
+  var graph2 = d3.select(".chart2")
+.attr("width", width2 + margin.left + margin.right)
+.attr("height", height2 + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// 5. X scale will use the index of our data
-var xScale = d3.scaleLinear()
-    .domain([0, n-1]) // input
-    .range([0, width]); // output
+var xChart2 = d3.scaleBand()
+.range([0, width2]);
 
-// 6. Y scale will use the randomly generate number
-var yScale = d3.scaleLinear()
-    .domain([0, 1]) // input
-    .range([height, 0]); // output
+var yChart2 = d3.scaleLinear()
+.range([height2, 0]);
 
-// 7. d3's line generator
-var line = d3.line()
-    .x(function(d, i) { return xScale(i); }) // set the x values for the line generator
-    .y(function(d) { return yScale(d.y); }) // set the y values for the line generator
-    .curve(d3.curveMonotoneX) // apply smoothing to the line
+var xAxis2 = d3.axisBottom(xChart2);
+var yAxis2 = d3.axisLeft(yChart2);
 
-// 8. An array of objects of length N. Each object has key -> value pair, the key being "y" and the value is a random number
-var dataset = d3.range(n).map(function(d) { return {"y": d3.randomUniform(1)() } })
+graph2.append("g")
+.attr("class", "y axis")
+.call(yAxis2)
 
-// 1. Add the SVG to the page and employ #2
-var svg1 = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//bottom axis
+graph2.append("g")
+.attr("class", "xAxis")
+.attr("transform", "translate(0," + height2 + ")")
+.call(xAxis2)
+.selectAll("text")
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d){
+  return "rotate(-65)";
+});
 
-// 3. Call the x axis in a group tag
-svg1.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(xScale)); // Create an axis component with d3.axisBottom
+//add labels
+graph2
+.append("text")
+.attr("transform", "translate(-35," +  (height2+margin.bottom)/2 + ") rotate(-90)")
+.text("Freedom");
 
-// 4. Call the y axis in a group tag
-svg1.append("g")
-    .attr("class", "y axis")
-    .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
+graph2
+.append("text")
+.attr("transform", "translate(" + (width2/2) + "," + (height2 + margin.bottom - 5) + ")")
+.text("Country");
 
-// 9. Append the path, bind the data, and call the line generator
-svg1.append("path")
-    .datum(dataset) // 10. Binds data to the line
-    .attr("class", "line") // Assign a class for styling
-    .attr("d", line); // 11. Calls the line generator
+var update2 = function(){
+  xChart2.domain(master_data.map(function(d){return d.Country}))
+  yChart2.domain( [0, d3.max(master_data, function(d){ return +d["Freedom"] })] );
 
-// 12. Appends a circle for each datapoint
-svg1.selectAll(".dot")
-    .data(dataset)
-  .enter().append("circle") // Uses the enter().append() method
-    .attr("class", "dot") // Assign a class for styling
-    .attr("cx", function(d, i) { return xScale(i) })
-    .attr("cy", function(d) { return yScale(d.y) })
-    .attr("r", 5)
-      .on("mouseover", function(a, b, c) {
-  			console.log(a)
-        this.attr('class', 'focus')
-		})
-      .on("mouseout", function() {  })
-//       .on("mousemove", mousemove);
+  var barWidth2 = width2/master_data.length;
+  var bars2 = graph2.selectAll(".bar")
+  .remove()
+  .exit()
+  .data(master_data)
+  bars2.enter()
+  .append("rect")
+  .attr("class", "bar")
+  .attr("x", function(d, i){ return i * barWidth2 + 1 })
+  .attr("y", function(d){ return yChart2( d["Freedom"]) })
+  .attr("height", function(d){ return height2 - yChart2(d["Freedom"]) })
+  .attr("width", barWidth2 - 1)
+  .attr("fill", "rgb(251,180,174)");
 
-//   var focus = svg1.append("g")
-//       .attr("class", "focus")
-//       .style("display", "none");
+  graph2.select('.y')
+  .call(yAxis2)
+  //bottom axis
+  graph2.select('.xAxis')
+  .attr("transform", "translate(0," + height2 + ")")
+  .call(xAxis2)
+  .selectAll("text")
+  .style("text-anchor", "end")
+  //.attr("dx", "-.8em")
+  //.attr("dy", ".15em")
+  .attr("transform", function(d){
+    return "rotate(-65)";
+  })
+}
 
-//   focus.append("circle")
-//       .attr("r", 4.5);
+var clear2 = function(){
+  if(master_data.length > 1){
+    master_data.splice(0, master_data.length)
+  }
+  update2()
+}
 
-//   focus.append("text")
-//       .attr("x", 9)
-//       .attr("dy", ".35em");
 
-//   svg1.append("rect")
-//       .attr("class", "overlay")
-//       .attr("width", width)
-//       .attr("height", height)
-//       .on("mouseover", function() { focus.style("display", null); })
-//       .on("mouseout", function() { focus.style("display", "none"); })
-//       .on("mousemove", mousemove);
+  // GDP
 
-//   function mousemove() {
-//     var x0 = x.invert(d3.mouse(this)[0]),
-//         i = bisectDate(data, x0, 1),
-//         d0 = data[i - 1],
-//         d1 = data[i],
-//         d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-//     focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-//     focus.select("text").text(d);
-//   }
+  var margin = {top: 20, right: 20, bottom: 95, left: 80};
+var width3 = 1000
+var height3 = 300
+  var graph3 = d3.select(".chart3")
+.attr("width", width3 + margin.left + margin.right)
+.attr("height", height3 + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var xChart3 = d3.scaleBand()
+.range([0, width3]);
+
+var yChart3 = d3.scaleLinear()
+.range([height3, 0]);
+
+var xAxis3 = d3.axisBottom(xChart3);
+var yAxis3 = d3.axisLeft(yChart3);
+
+graph3.append("g")
+.attr("class", "y axis")
+.call(yAxis3)
+
+//bottom axis
+graph3.append("g")
+.attr("class", "xAxis")
+.attr("transform", "translate(0," + height3 + ")")
+.call(xAxis3)
+.selectAll("text")
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d){
+  return "rotate(-65)";
+});
+
+//add labels
+graph3
+.append("text")
+.attr("transform", "translate(-35," +  (height3+margin.bottom)/2 + ") rotate(-90)")
+.text("GDP per Capita");
+
+graph3
+.append("text")
+.attr("transform", "translate(" + (width3/2) + "," + (height3 + margin.bottom - 5) + ")")
+.text("Country");
+
+var update3 = function(){
+  xChart3.domain(master_data.map(function(d){return d.Country}))
+  yChart3.domain( [0, d3.max(master_data, function(d){ return +d["GDP"] })] );
+
+  var barWidth3 = width3/master_data.length;
+  var bars3 = graph3.selectAll(".bar")
+  .remove()
+  .exit()
+  .data(master_data)
+  bars3.enter()
+  .append("rect")
+  .attr("class", "bar")
+  .attr("x", function(d, i){ return i * barWidth3 + 1 })
+  .attr("y", function(d){ return yChart3( d["GDP"]) })
+  .attr("height", function(d){ return height3 - yChart3(d["GDP"]) })
+  .attr("width", barWidth3 - 1)
+  .attr("fill", "rgb(251,180,174)");
+
+  graph3.select('.y')
+  .call(yAxis3)
+  //bottom axis
+  graph3.select('.xAxis')
+  .attr("transform", "translate(0," + height3 + ")")
+  .call(xAxis3)
+  .selectAll("text")
+  .style("text-anchor", "end")
+  //.attr("dx", "-.8em")
+  //.attr("dy", ".15em")
+  .attr("transform", function(d){
+    return "rotate(-65)";
+  })
+}
+
+var clear3 = function(){
+  if(master_data.length > 1){
+    master_data.splice(0, master_data.length)
+  }
+  update3()
+}
