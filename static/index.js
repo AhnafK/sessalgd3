@@ -344,11 +344,11 @@ var w2 = 200, h2 = 50;
 
     var y = d3.scaleLinear()
       .range([200, 0])
-      .domain([7.5, 0]);
+      .domain([8, 2]);
 
     var yAxis = d3.axisBottom()
       .scale(y)
-      .ticks(8);
+      .ticks(6);
 
     key.append("g")
       .attr("class", "y axis")
