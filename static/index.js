@@ -47,6 +47,25 @@ var button_2016 = document.getElementById("2016")
 var button_2017 = document.getElementById("2017")
 //console.log(button_2016)
 
+var ranktf = false
+
+var rank = d3.select(".buttons")
+             .append("svg")
+             .attr("width", 200)
+             .attr("height", 70);
+
+var findRanking = function(country_name){
+  var main_data = year()
+  for(var i = 0; i < main_data.length; i++){
+    var current = main_data[i]["Country"]
+    console.log(country_name.search(current));
+    if(country_name.search(current) != -1){
+       return "Rank " + main_data[i]["Happiness_Rank"]
+    }
+  }
+  return "No Rank"
+}
+
 var fill = function(){
 	console.log("fills")
 	var countries = d3.select("#map-holder")
@@ -149,14 +168,7 @@ var svg = d3
 // set to the same size as the "map-holder" div
 .attr("width", $("#map-holder").width())
 .attr("height", $("#map-holder").height())
-// add zoom functionality
-//.call(zoom)
 ;
-
-var mapFxn = function(){
-
-}
-
 // get map data
 d3.json(
   "https://raw.githubusercontent.com/andybarefoot/andybarefoot-www/master/maps/mapdata/custom50.json",
@@ -210,9 +222,27 @@ d3.json(
     })
     // add a mouseover action to show name label for feature/country
     .on("mouseover", function(d, i) {
+      if (!ranktf){
+        var country_name = d.properties["admin"]
+        var ranking = findRanking(country_name)
+        console.log(ranking);
+        ///*
+        rank.append("text")
+            .text(ranking)
+            .attr("font-size", "45px")
+            .attr("fill", "black")
+            .attr("x", "0")
+            .attr("y", "50")
+        ranktf = true
+            //*/
+      }
       d3.select("#countryLabel" + d.properties.iso_a3).style("display", "block");
     })
     .on("mouseout", function(d, i) {
+      rank.selectAll("text")
+      .remove()
+      .exit()
+      ranktf = false
       d3.select("#countryLabel" + d.properties.iso_a3).style("display", "none");
     })
     // add an onclick action to zoom into clicked country
@@ -253,9 +283,27 @@ d3.json(
     })
     // add mouseover functionality to the label
     .on("mouseover", function(d, i) {
+      if (!ranktf){
+        var country_name = d.properties["admin"]
+        var ranking = findRanking(country_name)
+        console.log(ranking);
+        ///*
+        rank.append("text")
+            .text(ranking)
+            .attr("font-size", "45px")
+            .attr("fill", "black")
+            .attr("x", "0")
+            .attr("y", "50")
+        ranktf = true
+            //*/
+      }
       d3.select(this).style("display", "block");
     })
     .on("mouseout", function(d, i) {
+      rank.selectAll("text")
+      .remove()
+      .exit()
+      ranktf = false
       d3.select(this).style("display", "none");
     })
     ///*   // add an onlcick action to zoom into clicked country
@@ -457,7 +505,7 @@ var update = function(){
     return "rotate(-65)";
   })
 }
-  
+
 
 
   // Freedom
