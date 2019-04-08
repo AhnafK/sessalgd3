@@ -5,14 +5,34 @@ var minZoom;
 var maxZoom;
 
 var countries = []
+
+var country_names = []
 var master_data = []
+var compare = []
+
 var json_data //default 2017 data
 var json_data_2016
 var json_data_2015
 
+var current_data
 var view_year = 2017;
 
+var year = function(){
+  var data_set
+  if (view_year == 2017){
+    data_set = json_data
+  }
+  if (view_year == 2016){
+    data_set = json_data_2016
+  }
+  if (view_year == 2015){
+    data_set = json_data_2015
+  }
+  return data_set
+}
+
 d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2017.json", function(data){
+  current_data = json_data
   json_data = data
 })
 d3.json("https://raw.githubusercontent.com/AhnafK/sessalgd3/master/data/2016.json", function(data){
@@ -34,16 +54,7 @@ var fill = function(){
 					  .select("g")
 					  .selectAll("path")
    	 				  .attr("fill", function(d,i){
-		var data_set
-		if (view_year == 2017){
-			data_set = json_data
-		}
-		if (view_year == 2016){
-			data_set = json_data_2016
-		}
-    if (view_year == 2015){
-			data_set = json_data_2015
-		}
+		var data_set = year()
       var country_name = d.properties["admin"]
       for(var i = 0; i < data_set.length; i++){
         if(country_name.search(data_set[i]["Country"]) != -1){
@@ -73,19 +84,25 @@ button_2015.addEventListener('click', function(){
   //console.log("red")
   view_year = 2015
   fill()
-  clear()
+  getData()
+  update()
+  //clear()
 })
 button_2016.addEventListener('click', function(){
   //console.log("red")
   view_year = 2016
   fill()
-  clear()
+  getData()
+  update()
+  //clear()
 })
 button_2017.addEventListener('click', function(){
   //console.log("red")
   view_year = 2017
   fill()
-  clear()
+  getData()
+  update()
+  //clear()
 })
 
 
@@ -135,6 +152,10 @@ var svg = d3
 // add zoom functionality
 //.call(zoom)
 ;
+
+var mapFxn = function(){
+
+}
 
 // get map data
 d3.json(
@@ -199,19 +220,18 @@ d3.json(
       var add = true
       var country_name = d.properties["admin"]
       var i
-      for (i = 0; i < master_data.length; i++){
-        if(country_name.search(master_data[i]["Country"]) != -1){
+      for (i = 0; i < country_names.length; i++){
+        if(country_name.search(country_names[i]) != -1){
           add = false
-          master_data.splice(i,1)
+          country_names.splice(i,1)
         }
       }
       if (add){
-        getData(country_name)
+        country_names[country_names.length] = country_name
       }
+      getData()
+      console.log(master_data)
       update()
-      //d3.selectAll(".country").classed("country-on", false);
-      //d3.select(this).classed("country-on", true);
-      //boxZoom(path.bounds(d), path.centroid(d), 20);
     });
     // Add a label group to each feature/country. This will contain the country name and a background rectangle
     // Use CSS to have class "countryLabel" initially hidden
@@ -241,22 +261,18 @@ d3.json(
       var add = true
       var country_name = d.properties["admin"]
       var i
-      for (i = 0; i < master_data.length; i++){
-        if(country_name.search(master_data[i]["Country"]) != -1){
-          //if (master_data[i]["Country"] == country_name){
+      for (i = 0; i < country_names.length; i++){
+        if(country_name.search(country_names[i]) != -1){
           add = false
-          master_data.splice(i,1)
-          console.log("false")
+          country_names.splice(i,1)
         }
       }
       if (add){
-        getData(country_name)
+        country_names[country_names.length] = country_name
       }
+      getData()
+      console.log(country_names)
       update()
-      update2()
-      //d3.selectAll(".country").classed("country-on", false);
-      //d3.select("#country" + d.properties.iso_a3).classed("country-on", true);
-      //boxZoom(path.bounds(d), path.centroid(d), 20);
     });
     // add the text to the label group showing country name
     countryLabels
@@ -282,7 +298,6 @@ d3.json(
     .attr("height", function(d) {
       return d.bbox.height;
     });
-    //initiateZoom();
   }
 );
 
@@ -343,7 +358,7 @@ var w2 = 200, h2 = 50;
       .text("axis title");
 
 var margin = {top: 20, right: 20, bottom: 95, left: 80};
-var width = 500
+var width = 1000
 var height = 300
 
 var graph = d3.select(".chart")
@@ -389,14 +404,19 @@ graph
 .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom - 5) + ")")
 .text("Country");
 
-var getData = function(name){
-  for(var i = 0; i < json_data.length; i++){
-    if(master_data.length > 5){
-      master_data.splice(0,1)
-    }
-    if(name.search(json_data[i]["Country"]) != -1){
-      master_data[master_data.length] = json_data[i]
-      console.log(master_data)
+var getData = function(){
+  master_data = []
+  var data_set = year()
+  for (var j = 0; j< country_names.length; j++){
+    for(var i = 0; i < data_set.length; i++){
+      if(master_data.length > 10){
+        master_data.splice(0,1)
+      }
+      if(country_names[j].search(data_set[i]["Country"]) != -1){
+        console.log(j,i)
+        master_data[master_data.length] = data_set[i]
+        console.log(master_data)
+      }
     }
   }
 }
@@ -432,6 +452,48 @@ var update = function(){
   .attr("transform", function(d){
     return "rotate(-65)";
   })
+  /*
+  .on("mouseover", function(d, i) {
+    //console.log(d)
+    d3.select("#barName" + d.Country).style("display", "block");
+  })
+  .on("mouseout", function(d, i) {
+    d3.select("#barName" + d.Country).style("display", "none");
+  });
+
+  var chart = d3.select(".chart")
+  var labels = graph
+  .data(master_data)
+  labels.enter()
+  .append("g")
+  .attr("class", "barLabel")
+  .attr("id", function(d) {
+    return "barName" + d.Country;
+  })
+  .attr("transform", function(d) {
+    return (
+      "translate(" + rect.centroid(d)[0] + "," + rect.centroid(d)[1] + ")"
+    );
+  })
+  // add mouseover functionality to the label
+  .on("mouseover", function(d, i) {
+    d3.select(this).style("display", "block");
+  })
+  .on("mouseout", function(d, i) {
+    d3.select(this).style("display", "none");
+  })
+
+  var bar_labels = labels
+  .append("text")
+  .attr("class", "")
+  .style("text-anchor", "middle")
+  .attr("dx", 0)
+  .attr("dy", 0)
+  .text(function(d) {
+    console.log(d)
+    return d;
+  })
+*/
 }
 
 var clear = function(){
