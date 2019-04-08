@@ -232,6 +232,8 @@ d3.json(
       getData()
       console.log(master_data)
       update()
+      update2()
+      update3()
     });
     // Add a label group to each feature/country. This will contain the country name and a background rectangle
     // Use CSS to have class "countryLabel" initially hidden
@@ -273,6 +275,8 @@ d3.json(
       getData()
       console.log(country_names)
       update()
+      update2()
+      update3()
     });
     // add the text to the label group showing country name
     countryLabels
@@ -340,11 +344,11 @@ var w2 = 200, h2 = 50;
 
     var y = d3.scaleLinear()
       .range([200, 0])
-      .domain([7, 0]);
+      .domain([7.5, 0]);
 
     var yAxis = d3.axisBottom()
       .scale(y)
-      .ticks(5);
+      .ticks(8);
 
     key.append("g")
       .attr("class", "y axis")
@@ -452,53 +456,183 @@ var update = function(){
   .attr("transform", function(d){
     return "rotate(-65)";
   })
-  /*
-  .on("mouseover", function(d, i) {
-    //console.log(d)
-    d3.select("#barName" + d.Country).style("display", "block");
-  })
-  .on("mouseout", function(d, i) {
-    d3.select("#barName" + d.Country).style("display", "none");
-  });
+}
+  
 
-  var chart = d3.select(".chart")
-  var labels = graph
+
+  // Freedom
+
+  var margin = {top: 20, right: 20, bottom: 95, left: 80};
+var width2 = 1000
+var height2 = 300
+  var graph2 = d3.select(".chart2")
+.attr("width", width2 + margin.left + margin.right)
+.attr("height", height2 + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var xChart2 = d3.scaleBand()
+.range([0, width2]);
+
+var yChart2 = d3.scaleLinear()
+.range([height2, 0]);
+
+var xAxis2 = d3.axisBottom(xChart2);
+var yAxis2 = d3.axisLeft(yChart2);
+
+graph2.append("g")
+.attr("class", "y axis")
+.call(yAxis2)
+
+//bottom axis
+graph2.append("g")
+.attr("class", "xAxis")
+.attr("transform", "translate(0," + height2 + ")")
+.call(xAxis2)
+.selectAll("text")
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d){
+  return "rotate(-65)";
+});
+
+//add labels
+graph2
+.append("text")
+.attr("transform", "translate(-35," +  (height2+margin.bottom)/2 + ") rotate(-90)")
+.text("Freedom");
+
+graph2
+.append("text")
+.attr("transform", "translate(" + (width2/2) + "," + (height2 + margin.bottom - 5) + ")")
+.text("Country");
+
+var update2 = function(){
+  xChart2.domain(master_data.map(function(d){return d.Country}))
+  yChart2.domain( [0, d3.max(master_data, function(d){ return +d["Freedom"] })] );
+
+  var barWidth2 = width2/master_data.length;
+  var bars2 = graph2.selectAll(".bar")
+  .remove()
+  .exit()
   .data(master_data)
-  labels.enter()
-  .append("g")
-  .attr("class", "barLabel")
-  .attr("id", function(d) {
-    return "barName" + d.Country;
-  })
-  .attr("transform", function(d) {
-    return (
-      "translate(" + rect.centroid(d)[0] + "," + rect.centroid(d)[1] + ")"
-    );
-  })
-  // add mouseover functionality to the label
-  .on("mouseover", function(d, i) {
-    d3.select(this).style("display", "block");
-  })
-  .on("mouseout", function(d, i) {
-    d3.select(this).style("display", "none");
-  })
+  bars2.enter()
+  .append("rect")
+  .attr("class", "bar")
+  .attr("x", function(d, i){ return i * barWidth2 + 1 })
+  .attr("y", function(d){ return yChart2( d["Freedom"]) })
+  .attr("height", function(d){ return height2 - yChart2(d["Freedom"]) })
+  .attr("width", barWidth2 - 1)
+  .attr("fill", "rgb(251,180,174)");
 
-  var bar_labels = labels
-  .append("text")
-  .attr("class", "")
-  .style("text-anchor", "middle")
-  .attr("dx", 0)
-  .attr("dy", 0)
-  .text(function(d) {
-    console.log(d)
-    return d;
+  graph2.select('.y')
+  .call(yAxis2)
+  //bottom axis
+  graph2.select('.xAxis')
+  .attr("transform", "translate(0," + height2 + ")")
+  .call(xAxis2)
+  .selectAll("text")
+  .style("text-anchor", "end")
+  //.attr("dx", "-.8em")
+  //.attr("dy", ".15em")
+  .attr("transform", function(d){
+    return "rotate(-65)";
   })
-*/
 }
 
-var clear = function(){
+var clear2 = function(){
   if(master_data.length > 1){
     master_data.splice(0, master_data.length)
   }
-  update()
+  update2()
+}
+
+
+  // GDP
+
+  var margin = {top: 20, right: 20, bottom: 95, left: 80};
+var width3 = 1000
+var height3 = 300
+  var graph3 = d3.select(".chart3")
+.attr("width", width3 + margin.left + margin.right)
+.attr("height", height3 + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var xChart3 = d3.scaleBand()
+.range([0, width3]);
+
+var yChart3 = d3.scaleLinear()
+.range([height3, 0]);
+
+var xAxis3 = d3.axisBottom(xChart3);
+var yAxis3 = d3.axisLeft(yChart3);
+
+graph3.append("g")
+.attr("class", "y axis")
+.call(yAxis3)
+
+//bottom axis
+graph3.append("g")
+.attr("class", "xAxis")
+.attr("transform", "translate(0," + height3 + ")")
+.call(xAxis3)
+.selectAll("text")
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d){
+  return "rotate(-65)";
+});
+
+//add labels
+graph3
+.append("text")
+.attr("transform", "translate(-35," +  (height3+margin.bottom)/2 + ") rotate(-90)")
+.text("GDP per Capita");
+
+graph3
+.append("text")
+.attr("transform", "translate(" + (width3/2) + "," + (height3 + margin.bottom - 5) + ")")
+.text("Country");
+
+var update3 = function(){
+  xChart3.domain(master_data.map(function(d){return d.Country}))
+  yChart3.domain( [0, d3.max(master_data, function(d){ return +d["GDP"] })] );
+
+  var barWidth3 = width3/master_data.length;
+  var bars3 = graph3.selectAll(".bar")
+  .remove()
+  .exit()
+  .data(master_data)
+  bars3.enter()
+  .append("rect")
+  .attr("class", "bar")
+  .attr("x", function(d, i){ return i * barWidth3 + 1 })
+  .attr("y", function(d){ return yChart3( d["GDP"]) })
+  .attr("height", function(d){ return height3 - yChart3(d["GDP"]) })
+  .attr("width", barWidth3 - 1)
+  .attr("fill", "rgb(251,180,174)");
+
+  graph3.select('.y')
+  .call(yAxis3)
+  //bottom axis
+  graph3.select('.xAxis')
+  .attr("transform", "translate(0," + height3 + ")")
+  .call(xAxis3)
+  .selectAll("text")
+  .style("text-anchor", "end")
+  //.attr("dx", "-.8em")
+  //.attr("dy", ".15em")
+  .attr("transform", function(d){
+    return "rotate(-65)";
+  })
+}
+
+var clear3 = function(){
+  if(master_data.length > 1){
+    master_data.splice(0, master_data.length)
+  }
+  update3()
 }

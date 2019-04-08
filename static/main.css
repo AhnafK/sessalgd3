@@ -9,6 +9,7 @@ body {
 #map-holder {
     width: 100vw;
     height: 100vh;
+    margin: auto;
 }
 svg rect {
     fill: lightskyblue;   /* map background colour */
@@ -56,3 +57,13 @@ svg rect {
     display: block;
     text-align: center;
 }
+
+.buttons {
+    margin: auto;
+    text-align: center;
+}
+
+.buttons#2015:focus{
+    color: black;
+}
+
