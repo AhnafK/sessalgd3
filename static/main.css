@@ -66,4 +66,10 @@ svg rect {
 .buttons#2015:focus{
     color: black;
 }
+h2{
+  text-align:center;
+}
 
+svg{
+  margin-bottom:25px;
+}
