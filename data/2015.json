@@ -7,11 +7,11 @@
    "Standard Error": 0.03411,
    "GDP": 1.39651,
    "Family": 1.34951,
-   "Health (Life Expectancy)": 0.94143,
+   "Health_Life_Expectancy": 0.94143,
    "Freedom": 0.66557,
-   "Trust (Government Corruption)": 0.41978,
+   "Trust_Government_Corruption": 0.41978,
    "Generosity": 0.29678,
-   "Dystopia Residual": 2.51738
+   "Dystopia_Residual": 2.51738
  },
  {
    "Country": "Iceland",
@@ -21,11 +21,11 @@
    "Standard Error": 0.04884,
    "GDP": 1.30232,
    "Family": 1.40223,
-   "Health (Life Expectancy)": 0.94784,
+   "Health_Life_Expectancy": 0.94784,
    "Freedom": 0.62877,
-   "Trust (Government Corruption)": 0.14145,
+   "Trust_Government_Corruption": 0.14145,
    "Generosity": 0.4363,
-   "Dystopia Residual": 2.70201
+   "Dystopia_Residual": 2.70201
  },
  {
    "Country": "Denmark",
@@ -35,11 +35,11 @@
    "Standard Error": 0.03328,
    "GDP": 1.32548,
    "Family": 1.36058,
-   "Health (Life Expectancy)": 0.87464,
+   "Health_Life_Expectancy": 0.87464,
    "Freedom": 0.64938,
-   "Trust (Government Corruption)": 0.48357,
+   "Trust_Government_Corruption": 0.48357,
    "Generosity": 0.34139,
-   "Dystopia Residual": 2.49204
+   "Dystopia_Residual": 2.49204
  },
  {
    "Country": "Norway",
@@ -49,11 +49,11 @@
    "Standard Error": 0.0388,
    "GDP": 1.459,
    "Family": 1.33095,
-   "Health (Life Expectancy)": 0.88521,
+   "Health_Life_Expectancy": 0.88521,
    "Freedom": 0.66973,
-   "Trust (Government Corruption)": 0.36503,
+   "Trust_Government_Corruption": 0.36503,
    "Generosity": 0.34699,
-   "Dystopia Residual": 2.46531
+   "Dystopia_Residual": 2.46531
  },
  {
    "Country": "Canada",
@@ -63,11 +63,11 @@
    "Standard Error": 0.03553,
    "GDP": 1.32629,
    "Family": 1.32261,
-   "Health (Life Expectancy)": 0.90563,
+   "Health_Life_Expectancy": 0.90563,
    "Freedom": 0.63297,
-   "Trust (Government Corruption)": 0.32957,
+   "Trust_Government_Corruption": 0.32957,
    "Generosity": 0.45811,
-   "Dystopia Residual": 2.45176
+   "Dystopia_Residual": 2.45176
  },
  {
    "Country": "Finland",
@@ -77,11 +77,11 @@
    "Standard Error": 0.0314,
    "GDP": 1.29025,
    "Family": 1.31826,
-   "Health (Life Expectancy)": 0.88911,
+   "Health_Life_Expectancy": 0.88911,
    "Freedom": 0.64169,
-   "Trust (Government Corruption)": 0.41372,
+   "Trust_Government_Corruption": 0.41372,
    "Generosity": 0.23351,
-   "Dystopia Residual": 2.61955
+   "Dystopia_Residual": 2.61955
  },
  {
    "Country": "Netherlands",
@@ -91,11 +91,11 @@
    "Standard Error": 0.02799,
    "GDP": 1.32944,
    "Family": 1.28017,
-   "Health (Life Expectancy)": 0.89284,
+   "Health_Life_Expectancy": 0.89284,
    "Freedom": 0.61576,
-   "Trust (Government Corruption)": 0.31814,
+   "Trust_Government_Corruption": 0.31814,
    "Generosity": 0.4761,
-   "Dystopia Residual": 2.4657
+   "Dystopia_Residual": 2.4657
  },
  {
    "Country": "Sweden",
@@ -105,11 +105,11 @@
    "Standard Error": 0.03157,
    "GDP": 1.33171,
    "Family": 1.28907,
-   "Health (Life Expectancy)": 0.91087,
+   "Health_Life_Expectancy": 0.91087,
    "Freedom": 0.6598,
-   "Trust (Government Corruption)": 0.43844,
+   "Trust_Government_Corruption": 0.43844,
    "Generosity": 0.36262,
-   "Dystopia Residual": 2.37119
+   "Dystopia_Residual": 2.37119
  },
  {
    "Country": "New Zealand",
@@ -119,11 +119,11 @@
    "Standard Error": 0.03371,
    "GDP": 1.25018,
    "Family": 1.31967,
-   "Health (Life Expectancy)": 0.90837,
+   "Health_Life_Expectancy": 0.90837,
    "Freedom": 0.63938,
-   "Trust (Government Corruption)": 0.42922,
+   "Trust_Government_Corruption": 0.42922,
    "Generosity": 0.47501,
-   "Dystopia Residual": 2.26425
+   "Dystopia_Residual": 2.26425
  },
  {
    "Country": "Australia",
@@ -133,11 +133,11 @@
    "Standard Error": 0.04083,
    "GDP": 1.33358,
    "Family": 1.30923,
-   "Health (Life Expectancy)": 0.93156,
+   "Health_Life_Expectancy": 0.93156,
    "Freedom": 0.65124,
-   "Trust (Government Corruption)": 0.35637,
+   "Trust_Government_Corruption": 0.35637,
    "Generosity": 0.43562,
-   "Dystopia Residual": 2.26646
+   "Dystopia_Residual": 2.26646
  },
  {
    "Country": "Israel",
@@ -147,11 +147,11 @@
    "Standard Error": 0.0347,
    "GDP": 1.22857,
    "Family": 1.22393,
-   "Health (Life Expectancy)": 0.91387,
+   "Health_Life_Expectancy": 0.91387,
    "Freedom": 0.41319,
-   "Trust (Government Corruption)": 0.07785,
+   "Trust_Government_Corruption": 0.07785,
    "Generosity": 0.33172,
-   "Dystopia Residual": 3.08854
+   "Dystopia_Residual": 3.08854
  },
  {
    "Country": "Costa Rica",
@@ -161,11 +161,11 @@
    "Standard Error": 0.04454,
    "GDP": 0.95578,
    "Family": 1.23788,
-   "Health (Life Expectancy)": 0.86027,
+   "Health_Life_Expectancy": 0.86027,
    "Freedom": 0.63376,
-   "Trust (Government Corruption)": 0.10583,
+   "Trust_Government_Corruption": 0.10583,
    "Generosity": 0.25497,
-   "Dystopia Residual": 3.17728
+   "Dystopia_Residual": 3.17728
  },
  {
    "Country": "Austria",
@@ -175,11 +175,11 @@
    "Standard Error": 0.03751,
    "GDP": 1.33723,
    "Family": 1.29704,
-   "Health (Life Expectancy)": 0.89042,
+   "Health_Life_Expectancy": 0.89042,
    "Freedom": 0.62433,
-   "Trust (Government Corruption)": 0.18676,
+   "Trust_Government_Corruption": 0.18676,
    "Generosity": 0.33088,
-   "Dystopia Residual": 2.5332
+   "Dystopia_Residual": 2.5332
  },
  {
    "Country": "Mexico",
@@ -189,11 +189,11 @@
    "Standard Error": 0.04176,
    "GDP": 1.02054,
    "Family": 0.91451,
-   "Health (Life Expectancy)": 0.81444,
+   "Health_Life_Expectancy": 0.81444,
    "Freedom": 0.48181,
-   "Trust (Government Corruption)": 0.21312,
+   "Trust_Government_Corruption": 0.21312,
    "Generosity": 0.14074,
-   "Dystopia Residual": 3.60214
+   "Dystopia_Residual": 3.60214
  },
  {
    "Country": "United States",
@@ -203,11 +203,11 @@
    "Standard Error": 0.03839,
    "GDP": 1.39451,
    "Family": 1.24711,
-   "Health (Life Expectancy)": 0.86179,
+   "Health_Life_Expectancy": 0.86179,
    "Freedom": 0.54604,
-   "Trust (Government Corruption)": 0.1589,
+   "Trust_Government_Corruption": 0.1589,
    "Generosity": 0.40105,
-   "Dystopia Residual": 2.51011
+   "Dystopia_Residual": 2.51011
  },
  {
    "Country": "Brazil",
@@ -217,11 +217,11 @@
    "Standard Error": 0.04076,
    "GDP": 0.98124,
    "Family": 1.23287,
-   "Health (Life Expectancy)": 0.69702,
+   "Health_Life_Expectancy": 0.69702,
    "Freedom": 0.49049,
-   "Trust (Government Corruption)": 0.17521,
+   "Trust_Government_Corruption": 0.17521,
    "Generosity": 0.14574,
-   "Dystopia Residual": 3.26001
+   "Dystopia_Residual": 3.26001
  },
  {
    "Country": "Luxembourg",
@@ -231,11 +231,11 @@
    "Standard Error": 0.03499,
    "GDP": 1.56391,
    "Family": 1.21963,
-   "Health (Life Expectancy)": 0.91894,
+   "Health_Life_Expectancy": 0.91894,
    "Freedom": 0.61583,
-   "Trust (Government Corruption)": 0.37798,
+   "Trust_Government_Corruption": 0.37798,
    "Generosity": 0.28034,
-   "Dystopia Residual": 1.96961
+   "Dystopia_Residual": 1.96961
  },
  {
    "Country": "Ireland",
@@ -245,11 +245,11 @@
    "Standard Error": 0.03676,
    "GDP": 1.33596,
    "Family": 1.36948,
-   "Health (Life Expectancy)": 0.89533,
+   "Health_Life_Expectancy": 0.89533,
    "Freedom": 0.61777,
-   "Trust (Government Corruption)": 0.28703,
+   "Trust_Government_Corruption": 0.28703,
    "Generosity": 0.45901,
-   "Dystopia Residual": 1.9757
+   "Dystopia_Residual": 1.9757
  },
  {
    "Country": "Belgium",
@@ -259,11 +259,11 @@
    "Standard Error": 0.03595,
    "GDP": 1.30782,
    "Family": 1.28566,
-   "Health (Life Expectancy)": 0.89667,
+   "Health_Life_Expectancy": 0.89667,
    "Freedom": 0.5845,
-   "Trust (Government Corruption)": 0.2254,
+   "Trust_Government_Corruption": 0.2254,
    "Generosity": 0.2225,
-   "Dystopia Residual": 2.41484
+   "Dystopia_Residual": 2.41484
  },
  {
    "Country": "United Arab Emirates",
@@ -273,11 +273,11 @@
    "Standard Error": 0.03729,
    "GDP": 1.42727,
    "Family": 1.12575,
-   "Health (Life Expectancy)": 0.80925,
+   "Health_Life_Expectancy": 0.80925,
    "Freedom": 0.64157,
-   "Trust (Government Corruption)": 0.38583,
+   "Trust_Government_Corruption": 0.38583,
    "Generosity": 0.26428,
-   "Dystopia Residual": 2.24743
+   "Dystopia_Residual": 2.24743
  },
  {
    "Country": "United Kingdom",
@@ -287,11 +287,11 @@
    "Standard Error": 0.01866,
    "GDP": 1.26637,
    "Family": 1.28548,
-   "Health (Life Expectancy)": 0.90943,
+   "Health_Life_Expectancy": 0.90943,
    "Freedom": 0.59625,
-   "Trust (Government Corruption)": 0.32067,
+   "Trust_Government_Corruption": 0.32067,
    "Generosity": 0.51912,
-   "Dystopia Residual": 1.96994
+   "Dystopia_Residual": 1.96994
  },
  {
    "Country": "Oman",
@@ -301,11 +301,11 @@
    "Standard Error": 0.05335,
    "GDP": 1.36011,
    "Family": 1.08182,
-   "Health (Life Expectancy)": 0.76276,
+   "Health_Life_Expectancy": 0.76276,
    "Freedom": 0.63274,
-   "Trust (Government Corruption)": 0.32524,
+   "Trust_Government_Corruption": 0.32524,
    "Generosity": 0.21542,
-   "Dystopia Residual": 2.47489
+   "Dystopia_Residual": 2.47489
  },
  {
    "Country": "Venezuela",
@@ -315,11 +315,11 @@
    "Standard Error": 0.06476,
    "GDP": 1.04424,
    "Family": 1.25596,
-   "Health (Life Expectancy)": 0.72052,
+   "Health_Life_Expectancy": 0.72052,
    "Freedom": 0.42908,
-   "Trust (Government Corruption)": 0.11069,
+   "Trust_Government_Corruption": 0.11069,
    "Generosity": 0.05841,
-   "Dystopia Residual": 3.19131
+   "Dystopia_Residual": 3.19131
  },
  {
    "Country": "Singapore",
@@ -329,11 +329,11 @@
    "Standard Error": 0.0378,
    "GDP": 1.52186,
    "Family": 1.02,
-   "Health (Life Expectancy)": 1.02525,
+   "Health_Life_Expectancy": 1.02525,
    "Freedom": 0.54252,
-   "Trust (Government Corruption)": 0.4921,
+   "Trust_Government_Corruption": 0.4921,
    "Generosity": 0.31105,
-   "Dystopia Residual": 1.88501
+   "Dystopia_Residual": 1.88501
  },
  {
    "Country": "Panama",
@@ -343,11 +343,11 @@
    "Standard Error": 0.0491,
    "GDP": 1.06353,
    "Family": 1.1985,
-   "Health (Life Expectancy)": 0.79661,
+   "Health_Life_Expectancy": 0.79661,
    "Freedom": 0.5421,
-   "Trust (Government Corruption)": 0.0927,
+   "Trust_Government_Corruption": 0.0927,
    "Generosity": 0.24434,
-   "Dystopia Residual": 2.84848
+   "Dystopia_Residual": 2.84848
  },
  {
    "Country": "Germany",
@@ -357,11 +357,11 @@
    "Standard Error": 0.01848,
    "GDP": 1.32792,
    "Family": 1.29937,
-   "Health (Life Expectancy)": 0.89186,
+   "Health_Life_Expectancy": 0.89186,
    "Freedom": 0.61477,
-   "Trust (Government Corruption)": 0.21843,
+   "Trust_Government_Corruption": 0.21843,
    "Generosity": 0.28214,
-   "Dystopia Residual": 2.11569
+   "Dystopia_Residual": 2.11569
  },
  {
    "Country": "Chile",
@@ -371,11 +371,11 @@
    "Standard Error": 0.058,
    "GDP": 1.10715,
    "Family": 1.12447,
-   "Health (Life Expectancy)": 0.85857,
+   "Health_Life_Expectancy": 0.85857,
    "Freedom": 0.44132,
-   "Trust (Government Corruption)": 0.12869,
+   "Trust_Government_Corruption": 0.12869,
    "Generosity": 0.33363,
-   "Dystopia Residual": 2.67585
+   "Dystopia_Residual": 2.67585
  },
  {
    "Country": "Qatar",
@@ -385,11 +385,11 @@
    "Standard Error": 0.06257,
    "GDP": 1.69042,
    "Family": 1.0786,
-   "Health (Life Expectancy)": 0.79733,
+   "Health_Life_Expectancy": 0.79733,
    "Freedom": 0.6404,
-   "Trust (Government Corruption)": 0.52208,
+   "Trust_Government_Corruption": 0.52208,
    "Generosity": 0.32573,
-   "Dystopia Residual": 1.55674
+   "Dystopia_Residual": 1.55674
  },
  {
    "Country": "France",
@@ -399,11 +399,11 @@
    "Standard Error": 0.03512,
    "GDP": 1.27778,
    "Family": 1.26038,
-   "Health (Life Expectancy)": 0.94579,
+   "Health_Life_Expectancy": 0.94579,
    "Freedom": 0.55011,
-   "Trust (Government Corruption)": 0.20646,
+   "Trust_Government_Corruption": 0.20646,
    "Generosity": 0.12332,
-   "Dystopia Residual": 2.21126
+   "Dystopia_Residual": 2.21126
  },
  {
    "Country": "Argentina",
@@ -413,11 +413,11 @@
    "Standard Error": 0.04612,
    "GDP": 1.05351,
    "Family": 1.24823,
-   "Health (Life Expectancy)": 0.78723,
+   "Health_Life_Expectancy": 0.78723,
    "Freedom": 0.44974,
-   "Trust (Government Corruption)": 0.08484,
+   "Trust_Government_Corruption": 0.08484,
    "Generosity": 0.11451,
-   "Dystopia Residual": 2.836
+   "Dystopia_Residual": 2.836
  },
  {
    "Country": "Czech Republic",
@@ -427,11 +427,11 @@
    "Standard Error": 0.04168,
    "GDP": 1.17898,
    "Family": 1.20643,
-   "Health (Life Expectancy)": 0.84483,
+   "Health_Life_Expectancy": 0.84483,
    "Freedom": 0.46364,
-   "Trust (Government Corruption)": 0.02652,
+   "Trust_Government_Corruption": 0.02652,
    "Generosity": 0.10686,
-   "Dystopia Residual": 2.67782
+   "Dystopia_Residual": 2.67782
  },
  {
    "Country": "Uruguay",
@@ -441,11 +441,11 @@
    "Standard Error": 0.04539,
    "GDP": 1.06166,
    "Family": 1.2089,
-   "Health (Life Expectancy)": 0.8116,
+   "Health_Life_Expectancy": 0.8116,
    "Freedom": 0.60362,
-   "Trust (Government Corruption)": 0.24558,
+   "Trust_Government_Corruption": 0.24558,
    "Generosity": 0.2324,
-   "Dystopia Residual": 2.32142
+   "Dystopia_Residual": 2.32142
  },
  {
    "Country": "Colombia",
@@ -455,11 +455,11 @@
    "Standard Error": 0.05051,
    "GDP": 0.91861,
    "Family": 1.24018,
-   "Health (Life Expectancy)": 0.69077,
+   "Health_Life_Expectancy": 0.69077,
    "Freedom": 0.53466,
-   "Trust (Government Corruption)": 0.0512,
+   "Trust_Government_Corruption": 0.0512,
    "Generosity": 0.18401,
-   "Dystopia Residual": 2.85737
+   "Dystopia_Residual": 2.85737
  },
  {
    "Country": "Thailand",
@@ -469,11 +469,11 @@
    "Standard Error": 0.03557,
    "GDP": 0.9669,
    "Family": 1.26504,
-   "Health (Life Expectancy)": 0.7385,
+   "Health_Life_Expectancy": 0.7385,
    "Freedom": 0.55664,
-   "Trust (Government Corruption)": 0.03187,
+   "Trust_Government_Corruption": 0.03187,
    "Generosity": 0.5763,
-   "Dystopia Residual": 2.31945
+   "Dystopia_Residual": 2.31945
  },
  {
    "Country": "Saudi Arabia",
@@ -483,11 +483,11 @@
    "Standard Error": 0.04633,
    "GDP": 1.39541,
    "Family": 1.08393,
-   "Health (Life Expectancy)": 0.72025,
+   "Health_Life_Expectancy": 0.72025,
    "Freedom": 0.31048,
-   "Trust (Government Corruption)": 0.32524,
+   "Trust_Government_Corruption": 0.32524,
    "Generosity": 0.13706,
-   "Dystopia Residual": 2.43872
+   "Dystopia_Residual": 2.43872
  },
  {
    "Country": "Spain",
@@ -497,11 +497,11 @@
    "Standard Error": 0.03468,
    "GDP": 1.23011,
    "Family": 1.31379,
-   "Health (Life Expectancy)": 0.95562,
+   "Health_Life_Expectancy": 0.95562,
    "Freedom": 0.45951,
-   "Trust (Government Corruption)": 0.06398,
+   "Trust_Government_Corruption": 0.06398,
    "Generosity": 0.18227,
-   "Dystopia Residual": 2.12367
+   "Dystopia_Residual": 2.12367
  },
  {
    "Country": "Malta",
@@ -511,11 +511,11 @@
    "Standard Error": 0.04206,
    "GDP": 1.2074,
    "Family": 1.30203,
-   "Health (Life Expectancy)": 0.88721,
+   "Health_Life_Expectancy": 0.88721,
    "Freedom": 0.60365,
-   "Trust (Government Corruption)": 0.13586,
+   "Trust_Government_Corruption": 0.13586,
    "Generosity": 0.51752,
-   "Dystopia Residual": 1.6488
+   "Dystopia_Residual": 1.6488
  },
  {
    "Country": "Taiwan",
@@ -525,11 +525,11 @@
    "Standard Error": 0.03868,
    "GDP": 1.29098,
    "Family": 1.07617,
-   "Health (Life Expectancy)": 0.8753,
+   "Health_Life_Expectancy": 0.8753,
    "Freedom": 0.3974,
-   "Trust (Government Corruption)": 0.08129,
+   "Trust_Government_Corruption": 0.08129,
    "Generosity": 0.25376,
-   "Dystopia Residual": 2.32323
+   "Dystopia_Residual": 2.32323
  },
  {
    "Country": "Kuwait",
@@ -539,11 +539,11 @@
    "Standard Error": 0.04456,
    "GDP": 1.55422,
    "Family": 1.16594,
-   "Health (Life Expectancy)": 0.72492,
+   "Health_Life_Expectancy": 0.72492,
    "Freedom": 0.55499,
-   "Trust (Government Corruption)": 0.25609,
+   "Trust_Government_Corruption": 0.25609,
    "Generosity": 0.16228,
-   "Dystopia Residual": 1.87634
+   "Dystopia_Residual": 1.87634
  },
  {
    "Country": "Suriname",
@@ -553,11 +553,11 @@
    "Standard Error": 0.09811,
    "GDP": 0.99534,
    "Family": 0.972,
-   "Health (Life Expectancy)": 0.6082,
+   "Health_Life_Expectancy": 0.6082,
    "Freedom": 0.59657,
-   "Trust (Government Corruption)": 0.13633,
+   "Trust_Government_Corruption": 0.13633,
    "Generosity": 0.16991,
-   "Dystopia Residual": 2.79094
+   "Dystopia_Residual": 2.79094
  },
  {
    "Country": "Trinidad and Tobago",
@@ -567,11 +567,11 @@
    "Standard Error": 0.10895,
    "GDP": 1.21183,
    "Family": 1.18354,
-   "Health (Life Expectancy)": 0.61483,
+   "Health_Life_Expectancy": 0.61483,
    "Freedom": 0.55884,
-   "Trust (Government Corruption)": 0.0114,
+   "Trust_Government_Corruption": 0.0114,
    "Generosity": 0.31844,
-   "Dystopia Residual": 2.26882
+   "Dystopia_Residual": 2.26882
  },
  {
    "Country": "El Salvador",
@@ -581,11 +581,11 @@
    "Standard Error": 0.05618,
    "GDP": 0.76454,
    "Family": 1.02507,
-   "Health (Life Expectancy)": 0.67737,
+   "Health_Life_Expectancy": 0.67737,
    "Freedom": 0.4035,
-   "Trust (Government Corruption)": 0.11776,
+   "Trust_Government_Corruption": 0.11776,
    "Generosity": 0.10692,
-   "Dystopia Residual": 3.035
+   "Dystopia_Residual": 3.035
  },
  {
    "Country": "Guatemala",
@@ -595,11 +595,11 @@
    "Standard Error": 0.05224,
    "GDP": 0.74553,
    "Family": 1.04356,
-   "Health (Life Expectancy)": 0.64425,
+   "Health_Life_Expectancy": 0.64425,
    "Freedom": 0.57733,
-   "Trust (Government Corruption)": 0.09472,
+   "Trust_Government_Corruption": 0.09472,
    "Generosity": 0.27489,
-   "Dystopia Residual": 2.74255
+   "Dystopia_Residual": 2.74255
  },
  {
    "Country": "Uzbekistan",
@@ -609,11 +609,11 @@
    "Standard Error": 0.04361,
    "GDP": 0.63244,
    "Family": 1.34043,
-   "Health (Life Expectancy)": 0.59772,
+   "Health_Life_Expectancy": 0.59772,
    "Freedom": 0.65821,
-   "Trust (Government Corruption)": 0.30826,
+   "Trust_Government_Corruption": 0.30826,
    "Generosity": 0.22837,
-   "Dystopia Residual": 2.23741
+   "Dystopia_Residual": 2.23741
  },
  {
    "Country": "Slovakia",
@@ -623,11 +623,11 @@
    "Standard Error": 0.04267,
    "GDP": 1.16891,
    "Family": 1.26999,
-   "Health (Life Expectancy)": 0.78902,
+   "Health_Life_Expectancy": 0.78902,
    "Freedom": 0.31751,
-   "Trust (Government Corruption)": 0.03431,
+   "Trust_Government_Corruption": 0.03431,
    "Generosity": 0.16893,
-   "Dystopia Residual": 2.24639
+   "Dystopia_Residual": 2.24639
  },
  {
    "Country": "Japan",
@@ -637,11 +637,11 @@
    "Standard Error": 0.03581,
    "GDP": 1.27074,
    "Family": 1.25712,
-   "Health (Life Expectancy)": 0.99111,
+   "Health_Life_Expectancy": 0.99111,
    "Freedom": 0.49615,
-   "Trust (Government Corruption)": 0.1806,
+   "Trust_Government_Corruption": 0.1806,
    "Generosity": 0.10705,
-   "Dystopia Residual": 1.68435
+   "Dystopia_Residual": 1.68435
  },
  {
    "Country": "South Korea",
@@ -651,11 +651,11 @@
    "Standard Error": 0.04098,
    "GDP": 1.24461,
    "Family": 0.95774,
-   "Health (Life Expectancy)": 0.96538,
+   "Health_Life_Expectancy": 0.96538,
    "Freedom": 0.33208,
-   "Trust (Government Corruption)": 0.07857,
+   "Trust_Government_Corruption": 0.07857,
    "Generosity": 0.18557,
-   "Dystopia Residual": 2.21978
+   "Dystopia_Residual": 2.21978
  },
  {
    "Country": "Ecuador",
@@ -665,11 +665,11 @@
    "Standard Error": 0.04528,
    "GDP": 0.86402,
    "Family": 0.99903,
-   "Health (Life Expectancy)": 0.79075,
+   "Health_Life_Expectancy": 0.79075,
    "Freedom": 0.48574,
-   "Trust (Government Corruption)": 0.1809,
+   "Trust_Government_Corruption": 0.1809,
    "Generosity": 0.11541,
-   "Dystopia Residual": 2.53942
+   "Dystopia_Residual": 2.53942
  },
  {
    "Country": "Bahrain",
@@ -679,11 +679,11 @@
    "Standard Error": 0.05412,
    "GDP": 1.32376,
    "Family": 1.21624,
-   "Health (Life Expectancy)": 0.74716,
+   "Health_Life_Expectancy": 0.74716,
    "Freedom": 0.45492,
-   "Trust (Government Corruption)": 0.306,
+   "Trust_Government_Corruption": 0.306,
    "Generosity": 0.17362,
-   "Dystopia Residual": 1.73797
+   "Dystopia_Residual": 1.73797
  },
  {
    "Country": "Italy",
@@ -693,11 +693,11 @@
    "Standard Error": 0.03914,
    "GDP": 1.25114,
    "Family": 1.19777,
-   "Health (Life Expectancy)": 0.95446,
+   "Health_Life_Expectancy": 0.95446,
    "Freedom": 0.26236,
-   "Trust (Government Corruption)": 0.02901,
+   "Trust_Government_Corruption": 0.02901,
    "Generosity": 0.22823,
-   "Dystopia Residual": 2.02518
+   "Dystopia_Residual": 2.02518
  },
  {
    "Country": "Bolivia",
@@ -707,11 +707,11 @@
    "Standard Error": 0.05642,
    "GDP": 0.68133,
    "Family": 0.97841,
-   "Health (Life Expectancy)": 0.5392,
+   "Health_Life_Expectancy": 0.5392,
    "Freedom": 0.57414,
-   "Trust (Government Corruption)": 0.088,
+   "Trust_Government_Corruption": 0.088,
    "Generosity": 0.20536,
-   "Dystopia Residual": 2.82334
+   "Dystopia_Residual": 2.82334
  },
  {
    "Country": "Moldova",
@@ -721,11 +721,11 @@
    "Standard Error": 0.03799,
    "GDP": 0.59448,
    "Family": 1.01528,
-   "Health (Life Expectancy)": 0.61826,
+   "Health_Life_Expectancy": 0.61826,
    "Freedom": 0.32818,
-   "Trust (Government Corruption)": 0.01615,
+   "Trust_Government_Corruption": 0.01615,
    "Generosity": 0.20951,
-   "Dystopia Residual": 3.10712
+   "Dystopia_Residual": 3.10712
  },
  {
    "Country": "Paraguay",
@@ -735,11 +735,11 @@
    "Standard Error": 0.04563,
    "GDP": 0.75985,
    "Family": 1.30477,
-   "Health (Life Expectancy)": 0.66098,
+   "Health_Life_Expectancy": 0.66098,
    "Freedom": 0.53899,
-   "Trust (Government Corruption)": 0.08242,
+   "Trust_Government_Corruption": 0.08242,
    "Generosity": 0.3424,
-   "Dystopia Residual": 2.18896
+   "Dystopia_Residual": 2.18896
  },
  {
    "Country": "Kazakhstan",
@@ -749,11 +749,11 @@
    "Standard Error": 0.04114,
    "GDP": 1.12254,
    "Family": 1.12241,
-   "Health (Life Expectancy)": 0.64368,
+   "Health_Life_Expectancy": 0.64368,
    "Freedom": 0.51649,
-   "Trust (Government Corruption)": 0.08454,
+   "Trust_Government_Corruption": 0.08454,
    "Generosity": 0.11827,
-   "Dystopia Residual": 2.24729
+   "Dystopia_Residual": 2.24729
  },
  {
    "Country": "Slovenia",
@@ -763,11 +763,11 @@
    "Standard Error": 0.04251,
    "GDP": 1.18498,
    "Family": 1.27385,
-   "Health (Life Expectancy)": 0.87337,
+   "Health_Life_Expectancy": 0.87337,
    "Freedom": 0.60855,
-   "Trust (Government Corruption)": 0.03787,
+   "Trust_Government_Corruption": 0.03787,
    "Generosity": 0.25328,
-   "Dystopia Residual": 1.61583
+   "Dystopia_Residual": 1.61583
  },
  {
    "Country": "Lithuania",
@@ -777,11 +777,11 @@
    "Standard Error": 0.03843,
    "GDP": 1.14723,
    "Family": 1.25745,
-   "Health (Life Expectancy)": 0.73128,
+   "Health_Life_Expectancy": 0.73128,
    "Freedom": 0.21342,
-   "Trust (Government Corruption)": 0.01031,
+   "Trust_Government_Corruption": 0.01031,
    "Generosity": 0.02641,
-   "Dystopia Residual": 2.44649
+   "Dystopia_Residual": 2.44649
  },
  {
    "Country": "Nicaragua",
@@ -791,11 +791,11 @@
    "Standard Error": 0.05371,
    "GDP": 0.59325,
    "Family": 1.14184,
-   "Health (Life Expectancy)": 0.74314,
+   "Health_Life_Expectancy": 0.74314,
    "Freedom": 0.55475,
-   "Trust (Government Corruption)": 0.19317,
+   "Trust_Government_Corruption": 0.19317,
    "Generosity": 0.27815,
-   "Dystopia Residual": 2.32407
+   "Dystopia_Residual": 2.32407
  },
  {
    "Country": "Peru",
@@ -805,11 +805,11 @@
    "Standard Error": 0.04615,
    "GDP": 0.90019,
    "Family": 0.97459,
-   "Health (Life Expectancy)": 0.73017,
+   "Health_Life_Expectancy": 0.73017,
    "Freedom": 0.41496,
-   "Trust (Government Corruption)": 0.05989,
+   "Trust_Government_Corruption": 0.05989,
    "Generosity": 0.14982,
-   "Dystopia Residual": 2.5945
+   "Dystopia_Residual": 2.5945
  },
  {
    "Country": "Belarus",
@@ -819,11 +819,11 @@
    "Standard Error": 0.03938,
    "GDP": 1.03192,
    "Family": 1.23289,
-   "Health (Life Expectancy)": 0.73608,
+   "Health_Life_Expectancy": 0.73608,
    "Freedom": 0.37938,
-   "Trust (Government Corruption)": 0.1909,
+   "Trust_Government_Corruption": 0.1909,
    "Generosity": 0.11046,
-   "Dystopia Residual": 2.1309
+   "Dystopia_Residual": 2.1309
  },
  {
    "Country": "Poland",
@@ -833,11 +833,11 @@
    "Standard Error": 0.04263,
    "GDP": 1.12555,
    "Family": 1.27948,
-   "Health (Life Expectancy)": 0.77903,
+   "Health_Life_Expectancy": 0.77903,
    "Freedom": 0.53122,
-   "Trust (Government Corruption)": 0.04212,
+   "Trust_Government_Corruption": 0.04212,
    "Generosity": 0.16759,
-   "Dystopia Residual": 1.86565
+   "Dystopia_Residual": 1.86565
  },
  {
    "Country": "Malaysia",
@@ -847,11 +847,11 @@
    "Standard Error": 0.0433,
    "GDP": 1.12486,
    "Family": 1.07023,
-   "Health (Life Expectancy)": 0.72394,
+   "Health_Life_Expectancy": 0.72394,
    "Freedom": 0.53024,
-   "Trust (Government Corruption)": 0.10501,
+   "Trust_Government_Corruption": 0.10501,
    "Generosity": 0.33075,
-   "Dystopia Residual": 1.88541
+   "Dystopia_Residual": 1.88541
  },
  {
    "Country": "Croatia",
@@ -861,11 +861,11 @@
    "Standard Error": 0.04394,
    "GDP": 1.08254,
    "Family": 0.79624,
-   "Health (Life Expectancy)": 0.78805,
+   "Health_Life_Expectancy": 0.78805,
    "Freedom": 0.25883,
-   "Trust (Government Corruption)": 0.0243,
+   "Trust_Government_Corruption": 0.0243,
    "Generosity": 0.05444,
-   "Dystopia Residual": 2.75414
+   "Dystopia_Residual": 2.75414
  },
  {
    "Country": "Libya",
@@ -875,11 +875,11 @@
    "Standard Error": 0.07832,
    "GDP": 1.13145,
    "Family": 1.11862,
-   "Health (Life Expectancy)": 0.7038,
+   "Health_Life_Expectancy": 0.7038,
    "Freedom": 0.41668,
-   "Trust (Government Corruption)": 0.11023,
+   "Trust_Government_Corruption": 0.11023,
    "Generosity": 0.18295,
-   "Dystopia Residual": 2.09066
+   "Dystopia_Residual": 2.09066
  },
  {
    "Country": "Russia",
@@ -889,11 +889,11 @@
    "Standard Error": 0.03135,
    "GDP": 1.13764,
    "Family": 1.23617,
-   "Health (Life Expectancy)": 0.66926,
+   "Health_Life_Expectancy": 0.66926,
    "Freedom": 0.36679,
-   "Trust (Government Corruption)": 0.03005,
+   "Trust_Government_Corruption": 0.03005,
    "Generosity": 0.00199,
-   "Dystopia Residual": 2.27394
+   "Dystopia_Residual": 2.27394
  },
  {
    "Country": "Jamaica",
@@ -903,11 +903,11 @@
    "Standard Error": 0.13693,
    "GDP": 0.81038,
    "Family": 1.15102,
-   "Health (Life Expectancy)": 0.68741,
+   "Health_Life_Expectancy": 0.68741,
    "Freedom": 0.50442,
-   "Trust (Government Corruption)": 0.02299,
+   "Trust_Government_Corruption": 0.02299,
    "Generosity": 0.2123,
-   "Dystopia Residual": 2.32038
+   "Dystopia_Residual": 2.32038
  },
  {
    "Country": "North Cyprus",
@@ -917,11 +917,11 @@
    "Standard Error": 0.05635,
    "GDP": 1.20806,
    "Family": 1.07008,
-   "Health (Life Expectancy)": 0.92356,
+   "Health_Life_Expectancy": 0.92356,
    "Freedom": 0.49027,
-   "Trust (Government Corruption)": 0.1428,
+   "Trust_Government_Corruption": 0.1428,
    "Generosity": 0.26169,
-   "Dystopia Residual": 1.59888
+   "Dystopia_Residual": 1.59888
  },
  {
    "Country": "Cyprus",
@@ -931,11 +931,11 @@
    "Standard Error": 0.0558,
    "GDP": 1.20813,
    "Family": 0.89318,
-   "Health (Life Expectancy)": 0.92356,
+   "Health_Life_Expectancy": 0.92356,
    "Freedom": 0.40672,
-   "Trust (Government Corruption)": 0.06146,
+   "Trust_Government_Corruption": 0.06146,
    "Generosity": 0.30638,
-   "Dystopia Residual": 1.88931
+   "Dystopia_Residual": 1.88931
  },
  {
    "Country": "Algeria",
@@ -945,11 +945,11 @@
    "Standard Error": 0.05099,
    "GDP": 0.93929,
    "Family": 1.07772,
-   "Health (Life Expectancy)": 0.61766,
+   "Health_Life_Expectancy": 0.61766,
    "Freedom": 0.28579,
-   "Trust (Government Corruption)": 0.17383,
+   "Trust_Government_Corruption": 0.17383,
    "Generosity": 0.07822,
-   "Dystopia Residual": 2.43209
+   "Dystopia_Residual": 2.43209
  },
  {
    "Country": "Kosovo",
@@ -959,11 +959,11 @@
    "Standard Error": 0.05018,
    "GDP": 0.80148,
    "Family": 0.81198,
-   "Health (Life Expectancy)": 0.63132,
+   "Health_Life_Expectancy": 0.63132,
    "Freedom": 0.24749,
-   "Trust (Government Corruption)": 0.04741,
+   "Trust_Government_Corruption": 0.04741,
    "Generosity": 0.2831,
-   "Dystopia Residual": 2.76579
+   "Dystopia_Residual": 2.76579
  },
  {
    "Country": "Turkmenistan",
@@ -973,11 +973,11 @@
    "Standard Error": 0.04175,
    "GDP": 0.95847,
    "Family": 1.22668,
-   "Health (Life Expectancy)": 0.53886,
+   "Health_Life_Expectancy": 0.53886,
    "Freedom": 0.4761,
-   "Trust (Government Corruption)": 0.30844,
+   "Trust_Government_Corruption": 0.30844,
    "Generosity": 0.16979,
-   "Dystopia Residual": 1.86984
+   "Dystopia_Residual": 1.86984
  },
  {
    "Country": "Mauritius",
@@ -987,11 +987,11 @@
    "Standard Error": 0.07197,
    "GDP": 1.00761,
    "Family": 0.98521,
-   "Health (Life Expectancy)": 0.7095,
+   "Health_Life_Expectancy": 0.7095,
    "Freedom": 0.56066,
-   "Trust (Government Corruption)": 0.07521,
+   "Trust_Government_Corruption": 0.07521,
    "Generosity": 0.37744,
-   "Dystopia Residual": 1.76145
+   "Dystopia_Residual": 1.76145
  },
  {
    "Country": "Hong Kong",
@@ -1001,11 +1001,11 @@
    "Standard Error": 0.05051,
    "GDP": 1.38604,
    "Family": 1.05818,
-   "Health (Life Expectancy)": 1.01328,
+   "Health_Life_Expectancy": 1.01328,
    "Freedom": 0.59608,
-   "Trust (Government Corruption)": 0.37124,
+   "Trust_Government_Corruption": 0.37124,
    "Generosity": 0.39478,
-   "Dystopia Residual": 0.65429
+   "Dystopia_Residual": 0.65429
  },
  {
    "Country": "Estonia",
@@ -1015,11 +1015,11 @@
    "Standard Error": 0.04013,
    "GDP": 1.15174,
    "Family": 1.22791,
-   "Health (Life Expectancy)": 0.77361,
+   "Health_Life_Expectancy": 0.77361,
    "Freedom": 0.44888,
-   "Trust (Government Corruption)": 0.15184,
+   "Trust_Government_Corruption": 0.15184,
    "Generosity": 0.0868,
-   "Dystopia Residual": 1.58782
+   "Dystopia_Residual": 1.58782
  },
  {
    "Country": "Indonesia",
@@ -1029,11 +1029,11 @@
    "Standard Error": 0.02596,
    "GDP": 0.82827,
    "Family": 1.08708,
-   "Health (Life Expectancy)": 0.63793,
+   "Health_Life_Expectancy": 0.63793,
    "Freedom": 0.46611,
-   "Trust (Government Corruption)": 0,
+   "Trust_Government_Corruption": 0,
    "Generosity": 0.51535,
-   "Dystopia Residual": 1.86399
+   "Dystopia_Residual": 1.86399
  },
  {
    "Country": "Vietnam",
@@ -1043,11 +1043,11 @@
    "Standard Error": 0.03107,
    "GDP": 0.63216,
    "Family": 0.91226,
-   "Health (Life Expectancy)": 0.74676,
+   "Health_Life_Expectancy": 0.74676,
    "Freedom": 0.59444,
-   "Trust (Government Corruption)": 0.10441,
+   "Trust_Government_Corruption": 0.10441,
    "Generosity": 0.1686,
-   "Dystopia Residual": 2.20173
+   "Dystopia_Residual": 2.20173
  },
  {
    "Country": "Turkey",
@@ -1057,11 +1057,11 @@
    "Standard Error": 0.03864,
    "GDP": 1.06098,
    "Family": 0.94632,
-   "Health (Life Expectancy)": 0.73172,
+   "Health_Life_Expectancy": 0.73172,
    "Freedom": 0.22815,
-   "Trust (Government Corruption)": 0.15746,
+   "Trust_Government_Corruption": 0.15746,
    "Generosity": 0.12253,
-   "Dystopia Residual": 2.08528
+   "Dystopia_Residual": 2.08528
  },
  {
    "Country": "Kyrgyzstan",
@@ -1071,11 +1071,11 @@
    "Standard Error": 0.03823,
    "GDP": 0.47428,
    "Family": 1.15115,
-   "Health (Life Expectancy)": 0.65088,
+   "Health_Life_Expectancy": 0.65088,
    "Freedom": 0.43477,
-   "Trust (Government Corruption)": 0.04232,
+   "Trust_Government_Corruption": 0.04232,
    "Generosity": 0.3003,
-   "Dystopia Residual": 2.2327
+   "Dystopia_Residual": 2.2327
  },
  {
    "Country": "Nigeria",
@@ -1085,11 +1085,11 @@
    "Standard Error": 0.04192,
    "GDP": 0.65435,
    "Family": 0.90432,
-   "Health (Life Expectancy)": 0.16007,
+   "Health_Life_Expectancy": 0.16007,
    "Freedom": 0.34334,
-   "Trust (Government Corruption)": 0.0403,
+   "Trust_Government_Corruption": 0.0403,
    "Generosity": 0.27233,
-   "Dystopia Residual": 2.89319
+   "Dystopia_Residual": 2.89319
  },
  {
    "Country": "Bhutan",
@@ -1099,11 +1099,11 @@
    "Standard Error": 0.03225,
    "GDP": 0.77042,
    "Family": 1.10395,
-   "Health (Life Expectancy)": 0.57407,
+   "Health_Life_Expectancy": 0.57407,
    "Freedom": 0.53206,
-   "Trust (Government Corruption)": 0.15445,
+   "Trust_Government_Corruption": 0.15445,
    "Generosity": 0.47998,
-   "Dystopia Residual": 1.63794
+   "Dystopia_Residual": 1.63794
  },
  {
    "Country": "Azerbaijan",
@@ -1113,11 +1113,11 @@
    "Standard Error": 0.03363,
    "GDP": 1.02389,
    "Family": 0.93793,
-   "Health (Life Expectancy)": 0.64045,
+   "Health_Life_Expectancy": 0.64045,
    "Freedom": 0.3703,
-   "Trust (Government Corruption)": 0.16065,
+   "Trust_Government_Corruption": 0.16065,
    "Generosity": 0.07799,
-   "Dystopia Residual": 2.00073
+   "Dystopia_Residual": 2.00073
  },
  {
    "Country": "Pakistan",
@@ -1127,11 +1127,11 @@
    "Standard Error": 0.03726,
    "GDP": 0.59543,
    "Family": 0.41411,
-   "Health (Life Expectancy)": 0.51466,
+   "Health_Life_Expectancy": 0.51466,
    "Freedom": 0.12102,
-   "Trust (Government Corruption)": 0.10464,
+   "Trust_Government_Corruption": 0.10464,
    "Generosity": 0.33671,
-   "Dystopia Residual": 3.10709
+   "Dystopia_Residual": 3.10709
  },
  {
    "Country": "Jordan",
@@ -1141,11 +1141,11 @@
    "Standard Error": 0.04524,
    "GDP": 0.90198,
    "Family": 1.05392,
-   "Health (Life Expectancy)": 0.69639,
+   "Health_Life_Expectancy": 0.69639,
    "Freedom": 0.40661,
-   "Trust (Government Corruption)": 0.14293,
+   "Trust_Government_Corruption": 0.14293,
    "Generosity": 0.11053,
-   "Dystopia Residual": 1.87996
+   "Dystopia_Residual": 1.87996
  },
  {
    "Country": "Montenegro",
@@ -1155,11 +1155,11 @@
    "Standard Error": 0.05235,
    "GDP": 0.97438,
    "Family": 0.90557,
-   "Health (Life Expectancy)": 0.72521,
+   "Health_Life_Expectancy": 0.72521,
    "Freedom": 0.1826,
-   "Trust (Government Corruption)": 0.14296,
+   "Trust_Government_Corruption": 0.14296,
    "Generosity": 0.1614,
-   "Dystopia Residual": 2.10017
+   "Dystopia_Residual": 2.10017
  },
  {
    "Country": "China",
@@ -1169,11 +1169,11 @@
    "Standard Error": 0.02424,
    "GDP": 0.89012,
    "Family": 0.94675,
-   "Health (Life Expectancy)": 0.81658,
+   "Health_Life_Expectancy": 0.81658,
    "Freedom": 0.51697,
-   "Trust (Government Corruption)": 0.02781,
+   "Trust_Government_Corruption": 0.02781,
    "Generosity": 0.08185,
-   "Dystopia Residual": 1.8604
+   "Dystopia_Residual": 1.8604
  },
  {
    "Country": "Zambia",
@@ -1183,11 +1183,11 @@
    "Standard Error": 0.06988,
    "GDP": 0.47038,
    "Family": 0.91612,
-   "Health (Life Expectancy)": 0.29924,
+   "Health_Life_Expectancy": 0.29924,
    "Freedom": 0.48827,
-   "Trust (Government Corruption)": 0.12468,
+   "Trust_Government_Corruption": 0.12468,
    "Generosity": 0.19591,
-   "Dystopia Residual": 2.6343
+   "Dystopia_Residual": 2.6343
  },
  {
    "Country": "Romania",
@@ -1197,11 +1197,11 @@
    "Standard Error": 0.06607,
    "GDP": 1.04345,
    "Family": 0.88588,
-   "Health (Life Expectancy)": 0.7689,
+   "Health_Life_Expectancy": 0.7689,
    "Freedom": 0.35068,
-   "Trust (Government Corruption)": 0.00649,
+   "Trust_Government_Corruption": 0.00649,
    "Generosity": 0.13748,
-   "Dystopia Residual": 1.93129
+   "Dystopia_Residual": 1.93129
  },
  {
    "Country": "Serbia",
@@ -1211,11 +1211,11 @@
    "Standard Error": 0.04864,
    "GDP": 0.92053,
    "Family": 1.00964,
-   "Health (Life Expectancy)": 0.74836,
+   "Health_Life_Expectancy": 0.74836,
    "Freedom": 0.20107,
-   "Trust (Government Corruption)": 0.02617,
+   "Trust_Government_Corruption": 0.02617,
    "Generosity": 0.19231,
-   "Dystopia Residual": 2.025
+   "Dystopia_Residual": 2.025
  },
  {
    "Country": "Portugal",
@@ -1225,11 +1225,11 @@
    "Standard Error": 0.04802,
    "GDP": 1.15991,
    "Family": 1.13935,
-   "Health (Life Expectancy)": 0.87519,
+   "Health_Life_Expectancy": 0.87519,
    "Freedom": 0.51469,
-   "Trust (Government Corruption)": 0.01078,
+   "Trust_Government_Corruption": 0.01078,
    "Generosity": 0.13719,
-   "Dystopia Residual": 1.26462
+   "Dystopia_Residual": 1.26462
  },
  {
    "Country": "Latvia",
@@ -1239,11 +1239,11 @@
    "Standard Error": 0.0464,
    "GDP": 1.11312,
    "Family": 1.09562,
-   "Health (Life Expectancy)": 0.72437,
+   "Health_Life_Expectancy": 0.72437,
    "Freedom": 0.29671,
-   "Trust (Government Corruption)": 0.06332,
+   "Trust_Government_Corruption": 0.06332,
    "Generosity": 0.18226,
-   "Dystopia Residual": 1.62215
+   "Dystopia_Residual": 1.62215
  },
  {
    "Country": "Philippines",
@@ -1253,11 +1253,11 @@
    "Standard Error": 0.04934,
    "GDP": 0.70532,
    "Family": 1.03516,
-   "Health (Life Expectancy)": 0.58114,
+   "Health_Life_Expectancy": 0.58114,
    "Freedom": 0.62545,
-   "Trust (Government Corruption)": 0.12279,
+   "Trust_Government_Corruption": 0.12279,
    "Generosity": 0.24991,
-   "Dystopia Residual": 1.7536
+   "Dystopia_Residual": 1.7536
  },
  {
    "Country": "Somaliland region",
@@ -1267,11 +1267,11 @@
    "Standard Error": 0.06161,
    "GDP": 0.18847,
    "Family": 0.95152,
-   "Health (Life Expectancy)": 0.43873,
+   "Health_Life_Expectancy": 0.43873,
    "Freedom": 0.46582,
-   "Trust (Government Corruption)": 0.39928,
+   "Trust_Government_Corruption": 0.39928,
    "Generosity": 0.50318,
-   "Dystopia Residual": 2.11032
+   "Dystopia_Residual": 2.11032
  },
  {
    "Country": "Morocco",
@@ -1281,11 +1281,11 @@
    "Standard Error": 0.0342,
    "GDP": 0.73479,
    "Family": 0.64095,
-   "Health (Life Expectancy)": 0.60954,
+   "Health_Life_Expectancy": 0.60954,
    "Freedom": 0.41691,
-   "Trust (Government Corruption)": 0.08546,
+   "Trust_Government_Corruption": 0.08546,
    "Generosity": 0.07172,
-   "Dystopia Residual": 2.45373
+   "Dystopia_Residual": 2.45373
  },
  {
    "Country": "Macedonia",
@@ -1295,11 +1295,11 @@
    "Standard Error": 0.05376,
    "GDP": 0.91851,
    "Family": 1.00232,
-   "Health (Life Expectancy)": 0.73545,
+   "Health_Life_Expectancy": 0.73545,
    "Freedom": 0.33457,
-   "Trust (Government Corruption)": 0.05327,
+   "Trust_Government_Corruption": 0.05327,
    "Generosity": 0.22359,
-   "Dystopia Residual": 1.73933
+   "Dystopia_Residual": 1.73933
  },
  {
    "Country": "Mozambique",
@@ -1309,11 +1309,11 @@
    "Standard Error": 0.07896,
    "GDP": 0.08308,
    "Family": 1.02626,
-   "Health (Life Expectancy)": 0.09131,
+   "Health_Life_Expectancy": 0.09131,
    "Freedom": 0.34037,
-   "Trust (Government Corruption)": 0.15603,
+   "Trust_Government_Corruption": 0.15603,
    "Generosity": 0.22269,
-   "Dystopia Residual": 3.05137
+   "Dystopia_Residual": 3.05137
  },
  {
    "Country": "Albania",
@@ -1323,11 +1323,11 @@
    "Standard Error": 0.05013,
    "GDP": 0.87867,
    "Family": 0.80434,
-   "Health (Life Expectancy)": 0.81325,
+   "Health_Life_Expectancy": 0.81325,
    "Freedom": 0.35733,
-   "Trust (Government Corruption)": 0.06413,
+   "Trust_Government_Corruption": 0.06413,
    "Generosity": 0.14272,
-   "Dystopia Residual": 1.89894
+   "Dystopia_Residual": 1.89894
  },
  {
    "Country": "Bosnia and Herzegovina",
@@ -1337,11 +1337,11 @@
    "Standard Error": 0.06913,
    "GDP": 0.83223,
    "Family": 0.91916,
-   "Health (Life Expectancy)": 0.79081,
+   "Health_Life_Expectancy": 0.79081,
    "Freedom": 0.09245,
-   "Trust (Government Corruption)": 0.00227,
+   "Trust_Government_Corruption": 0.00227,
    "Generosity": 0.24808,
-   "Dystopia Residual": 2.06367
+   "Dystopia_Residual": 2.06367
  },
  {
    "Country": "Lesotho",
@@ -1351,11 +1351,11 @@
    "Standard Error": 0.09438,
    "GDP": 0.37545,
    "Family": 1.04103,
-   "Health (Life Expectancy)": 0.07612,
+   "Health_Life_Expectancy": 0.07612,
    "Freedom": 0.31767,
-   "Trust (Government Corruption)": 0.12504,
+   "Trust_Government_Corruption": 0.12504,
    "Generosity": 0.16388,
-   "Dystopia Residual": 2.79832
+   "Dystopia_Residual": 2.79832
  },
  {
    "Country": "Dominican Republic",
@@ -1365,11 +1365,11 @@
    "Standard Error": 0.07446,
    "GDP": 0.89537,
    "Family": 1.17202,
-   "Health (Life Expectancy)": 0.66825,
+   "Health_Life_Expectancy": 0.66825,
    "Freedom": 0.57672,
-   "Trust (Government Corruption)": 0.14234,
+   "Trust_Government_Corruption": 0.14234,
    "Generosity": 0.21684,
-   "Dystopia Residual": 1.21305
+   "Dystopia_Residual": 1.21305
  },
  {
    "Country": "Laos",
@@ -1379,11 +1379,11 @@
    "Standard Error": 0.06698,
    "GDP": 0.59066,
    "Family": 0.73803,
-   "Health (Life Expectancy)": 0.54909,
+   "Health_Life_Expectancy": 0.54909,
    "Freedom": 0.59591,
-   "Trust (Government Corruption)": 0.24249,
+   "Trust_Government_Corruption": 0.24249,
    "Generosity": 0.42192,
-   "Dystopia Residual": 1.73799
+   "Dystopia_Residual": 1.73799
  },
  {
    "Country": "Mongolia",
@@ -1393,11 +1393,11 @@
    "Standard Error": 0.03313,
    "GDP": 0.82819,
    "Family": 1.3006,
-   "Health (Life Expectancy)": 0.60268,
+   "Health_Life_Expectancy": 0.60268,
    "Freedom": 0.43626,
-   "Trust (Government Corruption)": 0.02666,
+   "Trust_Government_Corruption": 0.02666,
    "Generosity": 0.3323,
-   "Dystopia Residual": 1.34759
+   "Dystopia_Residual": 1.34759
  },
  {
    "Country": "Swaziland",
@@ -1407,11 +1407,11 @@
    "Standard Error": 0.08742,
    "GDP": 0.71206,
    "Family": 1.07284,
-   "Health (Life Expectancy)": 0.07566,
+   "Health_Life_Expectancy": 0.07566,
    "Freedom": 0.30658,
-   "Trust (Government Corruption)": 0.0306,
+   "Trust_Government_Corruption": 0.0306,
    "Generosity": 0.18259,
-   "Dystopia Residual": 2.48676
+   "Dystopia_Residual": 2.48676
  },
  {
    "Country": "Greece",
@@ -1421,11 +1421,11 @@
    "Standard Error": 0.05062,
    "GDP": 1.15406,
    "Family": 0.92933,
-   "Health (Life Expectancy)": 0.88213,
+   "Health_Life_Expectancy": 0.88213,
    "Freedom": 0.07699,
-   "Trust (Government Corruption)": 0.01397,
+   "Trust_Government_Corruption": 0.01397,
    "Generosity": 0,
-   "Dystopia Residual": 1.80101
+   "Dystopia_Residual": 1.80101
  },
  {
    "Country": "Lebanon",
@@ -1435,11 +1435,11 @@
    "Standard Error": 0.04337,
    "GDP": 1.02564,
    "Family": 0.80001,
-   "Health (Life Expectancy)": 0.83947,
+   "Health_Life_Expectancy": 0.83947,
    "Freedom": 0.33916,
-   "Trust (Government Corruption)": 0.04582,
+   "Trust_Government_Corruption": 0.04582,
    "Generosity": 0.21854,
-   "Dystopia Residual": 1.57059
+   "Dystopia_Residual": 1.57059
  },
  {
    "Country": "Hungary",
@@ -1449,11 +1449,11 @@
    "Standard Error": 0.06107,
    "GDP": 1.12094,
    "Family": 1.20215,
-   "Health (Life Expectancy)": 0.75905,
+   "Health_Life_Expectancy": 0.75905,
    "Freedom": 0.32112,
-   "Trust (Government Corruption)": 0.02758,
+   "Trust_Government_Corruption": 0.02758,
    "Generosity": 0.128,
-   "Dystopia Residual": 1.24074
+   "Dystopia_Residual": 1.24074
  },
  {
    "Country": "Honduras",
@@ -1463,11 +1463,11 @@
    "Standard Error": 0.05648,
    "GDP": 0.59532,
    "Family": 0.95348,
-   "Health (Life Expectancy)": 0.6951,
+   "Health_Life_Expectancy": 0.6951,
    "Freedom": 0.40148,
-   "Trust (Government Corruption)": 0.06825,
+   "Trust_Government_Corruption": 0.06825,
    "Generosity": 0.23027,
-   "Dystopia Residual": 1.84408
+   "Dystopia_Residual": 1.84408
  },
  {
    "Country": "Tajikistan",
@@ -1477,11 +1477,11 @@
    "Standard Error": 0.03198,
    "GDP": 0.39047,
    "Family": 0.85563,
-   "Health (Life Expectancy)": 0.57379,
+   "Health_Life_Expectancy": 0.57379,
    "Freedom": 0.47216,
-   "Trust (Government Corruption)": 0.15072,
+   "Trust_Government_Corruption": 0.15072,
    "Generosity": 0.22974,
-   "Dystopia Residual": 2.11399
+   "Dystopia_Residual": 2.11399
  },
  {
    "Country": "Tunisia",
@@ -1491,11 +1491,11 @@
    "Standard Error": 0.03589,
    "GDP": 0.88113,
    "Family": 0.60429,
-   "Health (Life Expectancy)": 0.73793,
+   "Health_Life_Expectancy": 0.73793,
    "Freedom": 0.26268,
-   "Trust (Government Corruption)": 0.06358,
+   "Trust_Government_Corruption": 0.06358,
    "Generosity": 0.06431,
-   "Dystopia Residual": 2.12466
+   "Dystopia_Residual": 2.12466
  },
  {
    "Country": "Palestinian Territories",
@@ -1505,11 +1505,11 @@
    "Standard Error": 0.04394,
    "GDP": 0.59867,
    "Family": 0.92558,
-   "Health (Life Expectancy)": 0.66015,
+   "Health_Life_Expectancy": 0.66015,
    "Freedom": 0.24499,
-   "Trust (Government Corruption)": 0.12905,
+   "Trust_Government_Corruption": 0.12905,
    "Generosity": 0.11251,
-   "Dystopia Residual": 2.04384
+   "Dystopia_Residual": 2.04384
  },
  {
    "Country": "Bangladesh",
@@ -1519,11 +1519,11 @@
    "Standard Error": 0.03077,
    "GDP": 0.39753,
    "Family": 0.43106,
-   "Health (Life Expectancy)": 0.60164,
+   "Health_Life_Expectancy": 0.60164,
    "Freedom": 0.4082,
-   "Trust (Government Corruption)": 0.12569,
+   "Trust_Government_Corruption": 0.12569,
    "Generosity": 0.21222,
-   "Dystopia Residual": 2.51767
+   "Dystopia_Residual": 2.51767
  },
  {
    "Country": "Iran",
@@ -1533,11 +1533,11 @@
    "Standard Error": 0.04449,
    "GDP": 1.0088,
    "Family": 0.54447,
-   "Health (Life Expectancy)": 0.69805,
+   "Health_Life_Expectancy": 0.69805,
    "Freedom": 0.30033,
-   "Trust (Government Corruption)": 0.05863,
+   "Trust_Government_Corruption": 0.05863,
    "Generosity": 0.38086,
-   "Dystopia Residual": 1.6944
+   "Dystopia_Residual": 1.6944
  },
  {
    "Country": "Ukraine",
@@ -1547,11 +1547,11 @@
    "Standard Error": 0.04412,
    "GDP": 0.79907,
    "Family": 1.20278,
-   "Health (Life Expectancy)": 0.6739,
+   "Health_Life_Expectancy": 0.6739,
    "Freedom": 0.25123,
-   "Trust (Government Corruption)": 0.02961,
+   "Trust_Government_Corruption": 0.02961,
    "Generosity": 0.15275,
-   "Dystopia Residual": 1.5714
+   "Dystopia_Residual": 1.5714
  },
  {
    "Country": "Iraq",
@@ -1561,11 +1561,11 @@
    "Standard Error": 0.05232,
    "GDP": 0.98549,
    "Family": 0.81889,
-   "Health (Life Expectancy)": 0.60237,
+   "Health_Life_Expectancy": 0.60237,
    "Freedom": 0,
-   "Trust (Government Corruption)": 0.13788,
+   "Trust_Government_Corruption": 0.13788,
    "Generosity": 0.17922,
-   "Dystopia Residual": 1.95335
+   "Dystopia_Residual": 1.95335
  },
  {
    "Country": "South Africa",
@@ -1575,11 +1575,11 @@
    "Standard Error": 0.04585,
    "GDP": 0.92049,
    "Family": 1.18468,
-   "Health (Life Expectancy)": 0.27688,
+   "Health_Life_Expectancy": 0.27688,
    "Freedom": 0.33207,
-   "Trust (Government Corruption)": 0.08884,
+   "Trust_Government_Corruption": 0.08884,
    "Generosity": 0.11973,
-   "Dystopia Residual": 1.71956
+   "Dystopia_Residual": 1.71956
  },
  {
    "Country": "Ghana",
@@ -1589,11 +1589,11 @@
    "Standard Error": 0.04742,
    "GDP": 0.54558,
    "Family": 0.67954,
-   "Health (Life Expectancy)": 0.40132,
+   "Health_Life_Expectancy": 0.40132,
    "Freedom": 0.42342,
-   "Trust (Government Corruption)": 0.04355,
+   "Trust_Government_Corruption": 0.04355,
    "Generosity": 0.23087,
-   "Dystopia Residual": 2.30919
+   "Dystopia_Residual": 2.30919
  },
  {
    "Country": "Zimbabwe",
@@ -1603,11 +1603,11 @@
    "Standard Error": 0.0429,
    "GDP": 0.271,
    "Family": 1.03276,
-   "Health (Life Expectancy)": 0.33475,
+   "Health_Life_Expectancy": 0.33475,
    "Freedom": 0.25861,
-   "Trust (Government Corruption)": 0.08079,
+   "Trust_Government_Corruption": 0.08079,
    "Generosity": 0.18987,
-   "Dystopia Residual": 2.44191
+   "Dystopia_Residual": 2.44191
  },
  {
    "Country": "Liberia",
@@ -1617,11 +1617,11 @@
    "Standard Error": 0.11068,
    "GDP": 0.0712,
    "Family": 0.78968,
-   "Health (Life Expectancy)": 0.34201,
+   "Health_Life_Expectancy": 0.34201,
    "Freedom": 0.28531,
-   "Trust (Government Corruption)": 0.06232,
+   "Trust_Government_Corruption": 0.06232,
    "Generosity": 0.24362,
-   "Dystopia Residual": 2.77729
+   "Dystopia_Residual": 2.77729
  },
  {
    "Country": "India",
@@ -1631,11 +1631,11 @@
    "Standard Error": 0.02043,
    "GDP": 0.64499,
    "Family": 0.38174,
-   "Health (Life Expectancy)": 0.51529,
+   "Health_Life_Expectancy": 0.51529,
    "Freedom": 0.39786,
-   "Trust (Government Corruption)": 0.08492,
+   "Trust_Government_Corruption": 0.08492,
    "Generosity": 0.26475,
-   "Dystopia Residual": 2.27513
+   "Dystopia_Residual": 2.27513
  },
  {
    "Country": "Sudan",
@@ -1645,11 +1645,11 @@
    "Standard Error": 0.0674,
    "GDP": 0.52107,
    "Family": 1.01404,
-   "Health (Life Expectancy)": 0.36878,
+   "Health_Life_Expectancy": 0.36878,
    "Freedom": 0.10081,
-   "Trust (Government Corruption)": 0.1466,
+   "Trust_Government_Corruption": 0.1466,
    "Generosity": 0.19062,
-   "Dystopia Residual": 2.20857
+   "Dystopia_Residual": 2.20857
  },
  {
    "Country": "Haiti",
@@ -1659,11 +1659,11 @@
    "Standard Error": 0.07331,
    "GDP": 0.26673,
    "Family": 0.74302,
-   "Health (Life Expectancy)": 0.38847,
+   "Health_Life_Expectancy": 0.38847,
    "Freedom": 0.24425,
-   "Trust (Government Corruption)": 0.17175,
+   "Trust_Government_Corruption": 0.17175,
    "Generosity": 0.46187,
-   "Dystopia Residual": 2.24173
+   "Dystopia_Residual": 2.24173
  },
  {
    "Country": "Congo (Kinshasa)",
@@ -1673,11 +1673,11 @@
    "Standard Error": 0.0368,
    "GDP": 0,
    "Family": 1.0012,
-   "Health (Life Expectancy)": 0.09806,
+   "Health_Life_Expectancy": 0.09806,
    "Freedom": 0.22605,
-   "Trust (Government Corruption)": 0.07625,
+   "Trust_Government_Corruption": 0.07625,
    "Generosity": 0.24834,
-   "Dystopia Residual": 2.86712
+   "Dystopia_Residual": 2.86712
  },
  {
    "Country": "Nepal",
@@ -1687,11 +1687,11 @@
    "Standard Error": 0.03607,
    "GDP": 0.35997,
    "Family": 0.86449,
-   "Health (Life Expectancy)": 0.56874,
+   "Health_Life_Expectancy": 0.56874,
    "Freedom": 0.38282,
-   "Trust (Government Corruption)": 0.05907,
+   "Trust_Government_Corruption": 0.05907,
    "Generosity": 0.32296,
-   "Dystopia Residual": 1.95637
+   "Dystopia_Residual": 1.95637
  },
  {
    "Country": "Ethiopia",
@@ -1701,11 +1701,11 @@
    "Standard Error": 0.0378,
    "GDP": 0.19073,
    "Family": 0.60406,
-   "Health (Life Expectancy)": 0.44055,
+   "Health_Life_Expectancy": 0.44055,
    "Freedom": 0.4345,
-   "Trust (Government Corruption)": 0.15048,
+   "Trust_Government_Corruption": 0.15048,
    "Generosity": 0.24325,
-   "Dystopia Residual": 2.44876
+   "Dystopia_Residual": 2.44876
  },
  {
    "Country": "Sierra Leone",
@@ -1715,11 +1715,11 @@
    "Standard Error": 0.07068,
    "GDP": 0.33024,
    "Family": 0.95571,
-   "Health (Life Expectancy)": 0,
+   "Health_Life_Expectancy": 0,
    "Freedom": 0.4084,
-   "Trust (Government Corruption)": 0.08786,
+   "Trust_Government_Corruption": 0.08786,
    "Generosity": 0.21488,
-   "Dystopia Residual": 2.51009
+   "Dystopia_Residual": 2.51009
  },
  {
    "Country": "Mauritania",
@@ -1729,11 +1729,11 @@
    "Standard Error": 0.03947,
    "GDP": 0.45407,
    "Family": 0.86908,
-   "Health (Life Expectancy)": 0.35874,
+   "Health_Life_Expectancy": 0.35874,
    "Freedom": 0.24232,
-   "Trust (Government Corruption)": 0.17461,
+   "Trust_Government_Corruption": 0.17461,
    "Generosity": 0.219,
-   "Dystopia Residual": 2.11773
+   "Dystopia_Residual": 2.11773
  },
  {
    "Country": "Kenya",
@@ -1743,11 +1743,11 @@
    "Standard Error": 0.04734,
    "GDP": 0.36471,
    "Family": 0.99876,
-   "Health (Life Expectancy)": 0.41435,
+   "Health_Life_Expectancy": 0.41435,
    "Freedom": 0.42215,
-   "Trust (Government Corruption)": 0.05839,
+   "Trust_Government_Corruption": 0.05839,
    "Generosity": 0.37542,
-   "Dystopia Residual": 1.78555
+   "Dystopia_Residual": 1.78555
  },
  {
    "Country": "Djibouti",
@@ -1757,11 +1757,11 @@
    "Standard Error": 0.08096,
    "GDP": 0.44025,
    "Family": 0.59207,
-   "Health (Life Expectancy)": 0.36291,
+   "Health_Life_Expectancy": 0.36291,
    "Freedom": 0.46074,
-   "Trust (Government Corruption)": 0.28105,
+   "Trust_Government_Corruption": 0.28105,
    "Generosity": 0.18093,
-   "Dystopia Residual": 2.05125
+   "Dystopia_Residual": 2.05125
  },
  {
    "Country": "Armenia",
@@ -1771,11 +1771,11 @@
    "Standard Error": 0.04763,
    "GDP": 0.76821,
    "Family": 0.77711,
-   "Health (Life Expectancy)": 0.7299,
+   "Health_Life_Expectancy": 0.7299,
    "Freedom": 0.19847,
-   "Trust (Government Corruption)": 0.039,
+   "Trust_Government_Corruption": 0.039,
    "Generosity": 0.07855,
-   "Dystopia Residual": 1.75873
+   "Dystopia_Residual": 1.75873
  },
  {
    "Country": "Botswana",
@@ -1785,11 +1785,11 @@
    "Standard Error": 0.04934,
    "GDP": 0.99355,
    "Family": 1.10464,
-   "Health (Life Expectancy)": 0.04776,
+   "Health_Life_Expectancy": 0.04776,
    "Freedom": 0.49495,
-   "Trust (Government Corruption)": 0.12474,
+   "Trust_Government_Corruption": 0.12474,
    "Generosity": 0.10461,
-   "Dystopia Residual": 1.46181
+   "Dystopia_Residual": 1.46181
  },
  {
    "Country": "Myanmar",
@@ -1799,11 +1799,11 @@
    "Standard Error": 0.04351,
    "GDP": 0.27108,
    "Family": 0.70905,
-   "Health (Life Expectancy)": 0.48246,
+   "Health_Life_Expectancy": 0.48246,
    "Freedom": 0.44017,
-   "Trust (Government Corruption)": 0.19034,
+   "Trust_Government_Corruption": 0.19034,
    "Generosity": 0.79588,
-   "Dystopia Residual": 1.41805
+   "Dystopia_Residual": 1.41805
  },
  {
    "Country": "Georgia",
@@ -1813,11 +1813,11 @@
    "Standard Error": 0.04221,
    "GDP": 0.7419,
    "Family": 0.38562,
-   "Health (Life Expectancy)": 0.72926,
+   "Health_Life_Expectancy": 0.72926,
    "Freedom": 0.40577,
-   "Trust (Government Corruption)": 0.38331,
+   "Trust_Government_Corruption": 0.38331,
    "Generosity": 0.05547,
-   "Dystopia Residual": 1.59541
+   "Dystopia_Residual": 1.59541
  },
  {
    "Country": "Malawi",
@@ -1827,11 +1827,11 @@
    "Standard Error": 0.0613,
    "GDP": 0.01604,
    "Family": 0.41134,
-   "Health (Life Expectancy)": 0.22562,
+   "Health_Life_Expectancy": 0.22562,
    "Freedom": 0.43054,
-   "Trust (Government Corruption)": 0.06977,
+   "Trust_Government_Corruption": 0.06977,
    "Generosity": 0.33128,
-   "Dystopia Residual": 2.80791
+   "Dystopia_Residual": 2.80791
  },
  {
    "Country": "Sri Lanka",
@@ -1841,11 +1841,11 @@
    "Standard Error": 0.03751,
    "GDP": 0.83524,
    "Family": 1.01905,
-   "Health (Life Expectancy)": 0.70806,
+   "Health_Life_Expectancy": 0.70806,
    "Freedom": 0.53726,
-   "Trust (Government Corruption)": 0.09179,
+   "Trust_Government_Corruption": 0.09179,
    "Generosity": 0.40828,
-   "Dystopia Residual": 0.67108
+   "Dystopia_Residual": 0.67108
  },
  {
    "Country": "Cameroon",
@@ -1855,11 +1855,11 @@
    "Standard Error": 0.04678,
    "GDP": 0.4225,
    "Family": 0.88767,
-   "Health (Life Expectancy)": 0.23402,
+   "Health_Life_Expectancy": 0.23402,
    "Freedom": 0.49309,
-   "Trust (Government Corruption)": 0.05786,
+   "Trust_Government_Corruption": 0.05786,
    "Generosity": 0.20618,
-   "Dystopia Residual": 1.95071
+   "Dystopia_Residual": 1.95071
  },
  {
    "Country": "Bulgaria",
@@ -1869,11 +1869,11 @@
    "Standard Error": 0.04828,
    "GDP": 1.01216,
    "Family": 1.10614,
-   "Health (Life Expectancy)": 0.76649,
+   "Health_Life_Expectancy": 0.76649,
    "Freedom": 0.30587,
-   "Trust (Government Corruption)": 0.00872,
+   "Trust_Government_Corruption": 0.00872,
    "Generosity": 0.11921,
-   "Dystopia Residual": 0.89991
+   "Dystopia_Residual": 0.89991
  },
  {
    "Country": "Egypt",
@@ -1883,11 +1883,11 @@
    "Standard Error": 0.0326,
    "GDP": 0.8818,
    "Family": 0.747,
-   "Health (Life Expectancy)": 0.61712,
+   "Health_Life_Expectancy": 0.61712,
    "Freedom": 0.17288,
-   "Trust (Government Corruption)": 0.06324,
+   "Trust_Government_Corruption": 0.06324,
    "Generosity": 0.11291,
-   "Dystopia Residual": 1.59927
+   "Dystopia_Residual": 1.59927
  },
  {
    "Country": "Yemen",
@@ -1897,11 +1897,11 @@
    "Standard Error": 0.04367,
    "GDP": 0.54649,
    "Family": 0.68093,
-   "Health (Life Expectancy)": 0.40064,
+   "Health_Life_Expectancy": 0.40064,
    "Freedom": 0.35571,
-   "Trust (Government Corruption)": 0.07854,
+   "Trust_Government_Corruption": 0.07854,
    "Generosity": 0.09131,
-   "Dystopia Residual": 1.92313
+   "Dystopia_Residual": 1.92313
  },
  {
    "Country": "Angola",
@@ -1911,11 +1911,11 @@
    "Standard Error": 0.04758,
    "GDP": 0.75778,
    "Family": 0.8604,
-   "Health (Life Expectancy)": 0.16683,
+   "Health_Life_Expectancy": 0.16683,
    "Freedom": 0.10384,
-   "Trust (Government Corruption)": 0.07122,
+   "Trust_Government_Corruption": 0.07122,
    "Generosity": 0.12344,
-   "Dystopia Residual": 1.94939
+   "Dystopia_Residual": 1.94939
  },
  {
    "Country": "Mali",
@@ -1925,11 +1925,11 @@
    "Standard Error": 0.05602,
    "GDP": 0.26074,
    "Family": 1.03526,
-   "Health (Life Expectancy)": 0.20583,
+   "Health_Life_Expectancy": 0.20583,
    "Freedom": 0.38857,
-   "Trust (Government Corruption)": 0.12352,
+   "Trust_Government_Corruption": 0.12352,
    "Generosity": 0.18798,
-   "Dystopia Residual": 1.79293
+   "Dystopia_Residual": 1.79293
  },
  {
    "Country": "Congo (Brazzaville)",
@@ -1939,11 +1939,11 @@
    "Standard Error": 0.06682,
    "GDP": 0.67866,
    "Family": 0.6629,
-   "Health (Life Expectancy)": 0.31051,
+   "Health_Life_Expectancy": 0.31051,
    "Freedom": 0.41466,
-   "Trust (Government Corruption)": 0.11686,
+   "Trust_Government_Corruption": 0.11686,
    "Generosity": 0.12388,
-   "Dystopia Residual": 1.68135
+   "Dystopia_Residual": 1.68135
  },
  {
    "Country": "Comoros",
@@ -1953,11 +1953,11 @@
    "Standard Error": 0.04797,
    "GDP": 0.23906,
    "Family": 0.79273,
-   "Health (Life Expectancy)": 0.36315,
+   "Health_Life_Expectancy": 0.36315,
    "Freedom": 0.22917,
-   "Trust (Government Corruption)": 0.199,
+   "Trust_Government_Corruption": 0.199,
    "Generosity": 0.17441,
-   "Dystopia Residual": 1.95812
+   "Dystopia_Residual": 1.95812
  },
  {
    "Country": "Uganda",
@@ -1967,11 +1967,11 @@
    "Standard Error": 0.04317,
    "GDP": 0.21102,
    "Family": 1.13299,
-   "Health (Life Expectancy)": 0.33861,
+   "Health_Life_Expectancy": 0.33861,
    "Freedom": 0.45727,
-   "Trust (Government Corruption)": 0.07267,
+   "Trust_Government_Corruption": 0.07267,
    "Generosity": 0.29066,
-   "Dystopia Residual": 1.42766
+   "Dystopia_Residual": 1.42766
  },
  {
    "Country": "Senegal",
@@ -1981,11 +1981,11 @@
    "Standard Error": 0.03608,
    "GDP": 0.36498,
    "Family": 0.97619,
-   "Health (Life Expectancy)": 0.4354,
+   "Health_Life_Expectancy": 0.4354,
    "Freedom": 0.36772,
-   "Trust (Government Corruption)": 0.10713,
+   "Trust_Government_Corruption": 0.10713,
    "Generosity": 0.20843,
-   "Dystopia Residual": 1.44395
+   "Dystopia_Residual": 1.44395
  },
  {
    "Country": "Gabon",
@@ -1995,11 +1995,11 @@
    "Standard Error": 0.04547,
    "GDP": 1.06024,
    "Family": 0.90528,
-   "Health (Life Expectancy)": 0.43372,
+   "Health_Life_Expectancy": 0.43372,
    "Freedom": 0.31914,
-   "Trust (Government Corruption)": 0.11091,
+   "Trust_Government_Corruption": 0.11091,
    "Generosity": 0.06822,
-   "Dystopia Residual": 0.99895
+   "Dystopia_Residual": 0.99895
  },
  {
    "Country": "Niger",
@@ -2009,11 +2009,11 @@
    "Standard Error": 0.03602,
    "GDP": 0.0694,
    "Family": 0.77265,
-   "Health (Life Expectancy)": 0.29707,
+   "Health_Life_Expectancy": 0.29707,
    "Freedom": 0.47692,
-   "Trust (Government Corruption)": 0.15639,
+   "Trust_Government_Corruption": 0.15639,
    "Generosity": 0.19387,
-   "Dystopia Residual": 1.87877
+   "Dystopia_Residual": 1.87877
  },
  {
    "Country": "Cambodia",
@@ -2023,11 +2023,11 @@
    "Standard Error": 0.05069,
    "GDP": 0.46038,
    "Family": 0.62736,
-   "Health (Life Expectancy)": 0.61114,
+   "Health_Life_Expectancy": 0.61114,
    "Freedom": 0.66246,
-   "Trust (Government Corruption)": 0.07247,
+   "Trust_Government_Corruption": 0.07247,
    "Generosity": 0.40359,
-   "Dystopia Residual": 0.98195
+   "Dystopia_Residual": 0.98195
  },
  {
    "Country": "Tanzania",
@@ -2037,11 +2037,11 @@
    "Standard Error": 0.05061,
    "GDP": 0.2852,
    "Family": 1.00268,
-   "Health (Life Expectancy)": 0.38215,
+   "Health_Life_Expectancy": 0.38215,
    "Freedom": 0.32878,
-   "Trust (Government Corruption)": 0.05747,
+   "Trust_Government_Corruption": 0.05747,
    "Generosity": 0.34377,
-   "Dystopia Residual": 1.38079
+   "Dystopia_Residual": 1.38079
  },
  {
    "Country": "Madagascar",
@@ -2051,11 +2051,11 @@
    "Standard Error": 0.03633,
    "GDP": 0.20824,
    "Family": 0.66801,
-   "Health (Life Expectancy)": 0.46721,
+   "Health_Life_Expectancy": 0.46721,
    "Freedom": 0.19184,
-   "Trust (Government Corruption)": 0.08124,
+   "Trust_Government_Corruption": 0.08124,
    "Generosity": 0.21333,
-   "Dystopia Residual": 1.851
+   "Dystopia_Residual": 1.851
  },
  {
    "Country": "Central African Republic",
@@ -2065,11 +2065,11 @@
    "Standard Error": 0.06112,
    "GDP": 0.0785,
    "Family": 0,
-   "Health (Life Expectancy)": 0.06699,
+   "Health_Life_Expectancy": 0.06699,
    "Freedom": 0.48879,
-   "Trust (Government Corruption)": 0.08289,
+   "Trust_Government_Corruption": 0.08289,
    "Generosity": 0.23835,
-   "Dystopia Residual": 2.7223
+   "Dystopia_Residual": 2.7223
  },
  {
    "Country": "Chad",
@@ -2079,11 +2079,11 @@
    "Standard Error": 0.0383,
    "GDP": 0.34193,
    "Family": 0.76062,
-   "Health (Life Expectancy)": 0.1501,
+   "Health_Life_Expectancy": 0.1501,
    "Freedom": 0.23501,
-   "Trust (Government Corruption)": 0.05269,
+   "Trust_Government_Corruption": 0.05269,
    "Generosity": 0.18386,
-   "Dystopia Residual": 1.94296
+   "Dystopia_Residual": 1.94296
  },
  {
    "Country": "Guinea",
@@ -2093,11 +2093,11 @@
    "Standard Error": 0.0359,
    "GDP": 0.17417,
    "Family": 0.46475,
-   "Health (Life Expectancy)": 0.24009,
+   "Health_Life_Expectancy": 0.24009,
    "Freedom": 0.37725,
-   "Trust (Government Corruption)": 0.12139,
+   "Trust_Government_Corruption": 0.12139,
    "Generosity": 0.28657,
-   "Dystopia Residual": 1.99172
+   "Dystopia_Residual": 1.99172
  },
  {
    "Country": "Ivory Coast",
@@ -2107,11 +2107,11 @@
    "Standard Error": 0.05141,
    "GDP": 0.46534,
    "Family": 0.77115,
-   "Health (Life Expectancy)": 0.15185,
+   "Health_Life_Expectancy": 0.15185,
    "Freedom": 0.46866,
-   "Trust (Government Corruption)": 0.17922,
+   "Trust_Government_Corruption": 0.17922,
    "Generosity": 0.20165,
-   "Dystopia Residual": 1.41723
+   "Dystopia_Residual": 1.41723
  },
  {
    "Country": "Burkina Faso",
@@ -2121,11 +2121,11 @@
    "Standard Error": 0.04324,
    "GDP": 0.25812,
    "Family": 0.85188,
-   "Health (Life Expectancy)": 0.27125,
+   "Health_Life_Expectancy": 0.27125,
    "Freedom": 0.39493,
-   "Trust (Government Corruption)": 0.12832,
+   "Trust_Government_Corruption": 0.12832,
    "Generosity": 0.21747,
-   "Dystopia Residual": 1.46494
+   "Dystopia_Residual": 1.46494
  },
  {
    "Country": "Afghanistan",
@@ -2135,11 +2135,11 @@
    "Standard Error": 0.03084,
    "GDP": 0.31982,
    "Family": 0.30285,
-   "Health (Life Expectancy)": 0.30335,
+   "Health_Life_Expectancy": 0.30335,
    "Freedom": 0.23414,
-   "Trust (Government Corruption)": 0.09719,
+   "Trust_Government_Corruption": 0.09719,
    "Generosity": 0.3651,
-   "Dystopia Residual": 1.9521
+   "Dystopia_Residual": 1.9521
  },
  {
    "Country": "Rwanda",
@@ -2149,11 +2149,11 @@
    "Standard Error": 0.03464,
    "GDP": 0.22208,
    "Family": 0.7737,
-   "Health (Life Expectancy)": 0.42864,
+   "Health_Life_Expectancy": 0.42864,
    "Freedom": 0.59201,
-   "Trust (Government Corruption)": 0.55191,
+   "Trust_Government_Corruption": 0.55191,
    "Generosity": 0.22628,
-   "Dystopia Residual": 0.67042
+   "Dystopia_Residual": 0.67042
  },
  {
    "Country": "Benin",
@@ -2163,11 +2163,11 @@
    "Standard Error": 0.03656,
    "GDP": 0.28665,
    "Family": 0.35386,
-   "Health (Life Expectancy)": 0.3191,
+   "Health_Life_Expectancy": 0.3191,
    "Freedom": 0.4845,
-   "Trust (Government Corruption)": 0.0801,
+   "Trust_Government_Corruption": 0.0801,
    "Generosity": 0.1826,
-   "Dystopia Residual": 1.63328
+   "Dystopia_Residual": 1.63328
  },
  {
    "Country": "Syria",
@@ -2177,11 +2177,11 @@
    "Standard Error": 0.05015,
    "GDP": 0.6632,
    "Family": 0.47489,
-   "Health (Life Expectancy)": 0.72193,
+   "Health_Life_Expectancy": 0.72193,
    "Freedom": 0.15684,
-   "Trust (Government Corruption)": 0.18906,
+   "Trust_Government_Corruption": 0.18906,
    "Generosity": 0.47179,
-   "Dystopia Residual": 0.32858
+   "Dystopia_Residual": 0.32858
  },
  {
    "Country": "Burundi",
@@ -2191,11 +2191,11 @@
    "Standard Error": 0.08658,
    "GDP": 0.0153,
    "Family": 0.41587,
-   "Health (Life Expectancy)": 0.22396,
+   "Health_Life_Expectancy": 0.22396,
    "Freedom": 0.1185,
-   "Trust (Government Corruption)": 0.10062,
+   "Trust_Government_Corruption": 0.10062,
    "Generosity": 0.19727,
-   "Dystopia Residual": 1.83302
+   "Dystopia_Residual": 1.83302
  },
  {
    "Country": "Togo",
@@ -2205,10 +2205,10 @@
    "Standard Error": 0.06727,
    "GDP": 0.20868,
    "Family": 0.13995,
-   "Health (Life Expectancy)": 0.28443,
+   "Health_Life_Expectancy": 0.28443,
    "Freedom": 0.36453,
-   "Trust (Government Corruption)": 0.10731,
+   "Trust_Government_Corruption": 0.10731,
    "Generosity": 0.16681,
-   "Dystopia Residual": 1.56726
+   "Dystopia_Residual": 1.56726
  }
 ]
