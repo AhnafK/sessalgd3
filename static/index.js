@@ -58,7 +58,7 @@ var findRanking = function(country_name){
   var main_data = year()
   for(var i = 0; i < main_data.length; i++){
     var current = main_data[i]["Country"]
-    console.log(country_name.search(current));
+    //console.log(country_name.search(current));
     if(country_name.search(current) != -1){
        return "Rank " + main_data[i]["Happiness_Rank"]
     }
@@ -225,7 +225,7 @@ d3.json(
       if (!ranktf){
         var country_name = d.properties["admin"]
         var ranking = findRanking(country_name)
-        console.log(ranking);
+        //console.log(ranking);
         ///*
         rank.append("text")
             .text(country_name + ": " + ranking)
@@ -260,10 +260,10 @@ d3.json(
         country_names[country_names.length] = country_name
       }
       getData()
-      console.log(master_data)
+      //console.log(master_data)
       update()
-      update2()
-      update3()
+      //update2()
+      //update3()
     });
     // Add a label group to each feature/country. This will contain the country name and a background rectangle
     // Use CSS to have class "countryLabel" initially hidden
@@ -286,7 +286,7 @@ d3.json(
       if (!ranktf){
         var country_name = d.properties["admin"]
         var ranking = findRanking(country_name)
-        console.log(ranking);
+        //console.log(ranking);
         ///*
         rank.append("text")
             .text(d.properties["admin"] + ": " + ranking)
@@ -321,10 +321,10 @@ d3.json(
         country_names[country_names.length] = country_name
       }
       getData()
-      console.log(country_names)
+      //console.log(country_names)
       update()
-      update2()
-      update3()
+      //update2()
+      //update3()
     });
     // add the text to the label group showing country name
     countryLabels
@@ -410,7 +410,7 @@ var w2 = 200, h2 = 50;
       .text("axis title");
 
 var margin = {top: 20, right: 20, bottom: 95, left: 80};
-var width = 1000
+var width = 800
 var height = 300
 
 var graph = d3.select(".chart")
@@ -456,6 +456,11 @@ graph
 .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom - 5) + ")")
 .text("Country");
 
+var words = d3.select(".words")
+.append("svg")
+.attr("width", 1000)
+.attr("height", 70);
+
 var getData = function(){
   master_data = []
   var data_set = year()
@@ -477,19 +482,48 @@ var update = function(){
   xChart.domain(master_data.map(function(d){return d.Country}))
   yChart.domain( [0, d3.max(master_data, function(d){ return +d["Happiness_Score"] })] );
 
-  var barWidth = width/master_data.length;
+  var barWidth = width/master_data.length///compare.length;
   var bars = graph.selectAll(".bar")
   .remove()
   .exit()
   .data(master_data)
+  var vars = ["GDP", "Family", "Health_Life_Expectancy", "Freedom", "Generosity", "Trust_Government_Corruption", "Dystopia_Residual"]
+  var colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+for (var j = 0; j < vars.length; j++){
+  var current = vars[j]
   bars.enter()
-  .append("rect")
+.append("rect")
   .attr("class", "bar")
+  .attr("id", function(d){ return current + " -- " + d[current] })
   .attr("x", function(d, i){ return i * barWidth + 1 })
-  .attr("y", function(d){ return yChart( d["Happiness_Score"]) })
-  .attr("height", function(d){ return height - yChart(d["Happiness_Score"]) })
+  .attr("y", function(d){
+    var retVal = 0;
+    for (var f = 0; f <= j; f++){
+      //console.log(d)
+      retVal += parseFloat(d[vars[f]])
+      //console.log(retVal);
+    }
+    return yChart( retVal  )
+  })
+  .attr("height", function(d){ return height - yChart(d[vars[j]]) })
   .attr("width", barWidth - 1)
-  .attr("fill", "rgb(251,180,174)");
+  .attr("fill", colors[j])
+  .on("mouseover", function(){
+    words.append("text")
+        .text(this.getAttribute("id"))
+        .attr("font-size", "25px")
+        .attr("fill", "black")
+        .attr("x", "0")
+        .attr("y", "50")
+  })
+  .on("mouseout", function(){
+    words.selectAll("text")
+    .remove()
+    .exit()
+    //wordstf = false
+  })
+}
+
 
   graph.select('.y')
   .call(yAxis)
@@ -505,5 +539,3 @@ var update = function(){
     return "rotate(-65)";
   })
 }
-
-
